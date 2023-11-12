@@ -14,12 +14,12 @@ import NewBalance from '../pages/NewBalance'
 
 
 import { Routes, Route } from 'react-router-dom';
+import Contact from '../pages/Contact';
 
 const Main = () => (
   <main className="relative">
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/about-us" element={<About />} />
       <Route path="/men" element={< Men />} > 
          <Route  path="AllShoes" element={<AllShoes/>}/> 
          <Route  path="nike" element={<Nike />}/> 
@@ -30,6 +30,8 @@ const Main = () => (
          <Route  path="newbalance" element={<NewBalance />}/>
        </Route>
       <Route path="/women" element={< Women />} />
+      <Route path="/about-us" element={<About />} />
+      <Route path="/contact-us" element={<Contact />} />
       <Route path="*" element={<Notfound />} />
     </Routes>
   </main>

@@ -4,7 +4,7 @@ import { menShoeHeader } from '../constants'
 
 const Men = () => {
   return (
-    <section className='padding'>
+    <section className='padding max-container'>
 
       <div className='sm:px-10 px-4 sm:py-16 py-12 flex justify-center items-center text-center font-extrabold text-lg text-slate-gray font-montserrat leading-normal bg-center bg-slate-50 shadow-3xl rounded box-border mt-6'>
         <h2 className='tracking-wider'>
