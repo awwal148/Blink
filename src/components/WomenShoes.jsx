@@ -1,10 +1,10 @@
 import { NavLink, Link, Outlet } from "react-router-dom";
 import { shoeBrand } from "../constants";
 import { useState } from "react";
-import AllShoes from "../pages/AllShoes"
+import WomenAllShoes from "../pages/womenAllShoes";
 import Result from "./Result";
 
-const MenShoes = () => {
+const WomenShoes = () => {
   const [ displayAllShoes, setDisplayAllShoes ] = useState(true)
 
   const DisplayShoes = () => {
@@ -37,7 +37,7 @@ const MenShoes = () => {
           </div>
           <div className="">
             {!displayAllShoes && <Outlet />}
-        {displayAllShoes && <AllShoes />}
+        {displayAllShoes && <WomenAllShoes />}
             </div>
         </div>
     </section>
@@ -45,4 +45,4 @@ const MenShoes = () => {
 }
 
 
-export default MenShoes
+export default WomenShoes

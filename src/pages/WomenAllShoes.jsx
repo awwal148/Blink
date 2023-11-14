@@ -1,19 +1,15 @@
-import React from 'react';
-import { listOfMenShoes, gender } from '../constants';
-import { useFilter } from '../components/ContextApi.JSX';
+import React from "react"
+import { gender, listOfMenShoes } from "../constants"
+import { useFilter } from "../components/ContextApi.JSX"
+const WomenAllShoes = () => {  
+    const { setBrandFilter } = useFilter();
 
-const Balanciaga = () => {
-  const currentBrandName = "balanciaga"
-  const {setBrandFilter} = useFilter()
-  const nikeShoes = listOfMenShoes.filter((shoe) => shoe.BrandName.toLowerCase().includes(currentBrandName));
-
-  React.useEffect(() => {
-    setBrandFilter(currentBrandName)
-  },[setBrandFilter])
-
+     React.useEffect(() => {
+    setBrandFilter(''); // Clear the filter for all shoes
+  }, [setBrandFilter]);
   return (
-    <section className='shoe-grid w-full mt-14 bg-white max-container'>
-      {nikeShoes.map((shoe) => {
+    <section className="shoe-grid w-full mt-14 bg-white max-container">
+    {listOfMenShoes.map((shoe) => {
       return (
         <div key={shoe.rating} className="shoe-grid-item shoe-flex hover:shadow-lg hover:shadow-white-500/50 box-border mb-2">
         <div className="w-[100%] h-[20rem] hover:h-[20.4rem] bg-slate-400">
@@ -36,8 +32,10 @@ const Balanciaga = () => {
         </div>
       )
     })}
-    </section>
-  );
-};
+  </section>
+  )
+  
+}
 
-export default Balanciaga;
+
+export default WomenAllShoes

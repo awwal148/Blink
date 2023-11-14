@@ -1,25 +1,26 @@
-import { listOfMenShoes } from "../constants"
-import { useEffect, useState } from "react";
+// Result.js
+import React, { useEffect, useState } from "react";
+import { listOfMenShoes } from "../constants";
+import { useFilter } from "./ContextApi.JSX";
 
 const Result = () => {
-
-    const [numberOfMenShoes, setNumberOfMenShoes] = useState(0)
+  const { filterBrand } = useFilter();
+  const [filteredItemCount, setFilteredItemCount] = useState(0);
 
   useEffect(() => {
-  const numberOfShoes = listOfMenShoes.length;
-  setNumberOfMenShoes(numberOfShoes);
-}, [listOfMenShoes]);
-
-useEffect(() => {
-  console.log('numberOfMenShoes:', numberOfMenShoes);
-}, [numberOfMenShoes]);
+    const filteredData = listOfMenShoes.filter(
+      (shoe) =>
+        filterBrand === "" || shoe.BrandName.toLowerCase().includes(filterBrand.toLowerCase())
+    );
+    setFilteredItemCount(filteredData.length);
+  }, [listOfMenShoes, filterBrand]);
 
   return (
     <div className="flex justify-between font-montserrat leading-normal max-container">
-        <h3>{numberOfMenShoes} Results</h3>
-        <h3>VIEWS</h3>
+      <h3>{filteredItemCount} Results</h3>
+      <h3>VIEWS</h3>
     </div>
-  )
-}
+  );
+};
 
-export default Result
+export default Result;
