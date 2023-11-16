@@ -1,7 +1,6 @@
 import MenShoes from '../components/MenShoes';
 import { menShoeHeader } from '../constants'
 
-
 const Men = () => {
   return (
     <section className='padding max-container'>
