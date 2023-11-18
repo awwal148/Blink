@@ -18,7 +18,7 @@ const Hero = () => {
           <br />
           <span className="text-coral-red inline-block mt-3">Blink</span> Shoes
         </h1>
-        <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">Discover stylish Nike arrivals, quality comfort, and innovation for your active life</p>
+        <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">Discover stylish Blink arrivals, quality comfort, and innovation for your active life, with products from your favorite Brands.</p>
         
         <Button  label="shop now" iconURL={arrowRight}/>
 
