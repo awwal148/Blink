@@ -3,6 +3,7 @@ import SuperQuality from '../sections/SuperQuality';
 import Services from '../sections/Services';
 import SpecialOffers from '../sections/SpecialOffer';
 import CustomersReviews from '../sections/CustomerReviews';
+import ShoeBanner from "../sections/ShoeBanner";
 import Hero from "../sections/Hero";
 import Subscribe from '../sections/Subscribe';
 const Home = () => {
@@ -22,6 +23,9 @@ const Home = () => {
     </section>
     <section className="padding">
       <SpecialOffers />
+    </section>
+    <section className="padding">
+      <ShoeBanner />
     </section>
     <section className="bg-pale-blue padding">
       <CustomersReviews />

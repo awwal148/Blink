@@ -41,15 +41,14 @@ const Nav = () => {
         </nav>
         {navMenu && <div className='absolute top-0 right-0 bg-white w-[60%] min-h-[600px]  shadow-lg shadow-blue-500/50 p-10 animate-slideIn lg:hidden z-40'>
             {navMenu && (<button onClick={ NavMenuBtn } className=' pl-[90%]  pb-3'> <img src={iconClose} alt="navClose" /></button>)}
-           <ul className="flex-1 flex justify-center items-center max-lg:block space-x-4">
+           <ul className=" flex max-lg:block">
   {navLinks.map((item) => (
-    <div key={item.label} className='flex justify-between px-0 py-4'>
+    <div key={item.label} className='flex px-0 py-4'>
       <li>
         <Link to={item.href} onClick={NavMenuBtn} className="font-montserrat leading-normal text-lg text-slate-gray">
           {item.label} 
         </Link>
       </li>
-      <p className='font-montserrat leading-normal text-lg text-slate-gray '> x </p>
     </div>
   ))}
 </ul>

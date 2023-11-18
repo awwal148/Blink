@@ -15,47 +15,58 @@ import womenShoeThree from '../assets/assets/images/WomenShoe3.webp';
  import womenShoeFour from '../assets/assets/images/men-shoe2.jpg';
 import womenShoeFive from '../assets/assets/images/WomenShoe5.webp';
 
-import pumaShoe1 from '../assets/assets/images/PumaShoes1.jpg';
-import pumaShoe2 from '../assets/assets/images/PumaShoes2.jpg';
-import pumaShoe3 from '../assets/assets/images/PumaShoes3.jpg';
-import pumaShoe4 from '../assets/assets/images/PumaShoes4.jpg';
-import pumaShoe5 from '../assets/assets/images/PumaShoes5.jpg';
-import pumaShoe6 from '../assets/assets/images/PumaShoes6.jpg';
+import pumaShoe1 from '../assets/assets/images/MenPuma1.webp';
+import pumaShoe2 from '../assets/assets/images/MenPuma2.webp';
+import pumaShoe3 from '../assets/assets/images/MenPuma3.webp';
+import pumaShoe4 from '../assets/assets/images/MenPuma4.webp';
+import pumaShoe5 from '../assets/assets/images/MenPuma5.webp';
+import pumaShoe6 from '../assets/assets/images/MenPuma6.webp';
+import pumaShoe7 from '../assets/assets/images/MenPuma7.webp';
 
-import NikeShoes1 from '../assets/assets/images/NikeShoes1.jpg';
-import NikeShoes2 from '../assets/assets/images/NikeShoes2.jpg';
-import NikeShoes3 from '../assets/assets/images/NikeShoes3.jpg';
-import NikeShoes4 from '../assets/assets/images/NikeShoes4.jpg';
-import NikeShoes5 from '../assets/assets/images/NikeShoes5.jpg';
-import NikeShoes6 from '../assets/assets/images/NikeShoes6.jpg';
+import NikeShoes1 from '../assets/assets/images/MenNike1.webp';
+import NikeShoes2 from '../assets/assets/images/MenNike2.webp';
+import NikeShoes3 from '../assets/assets/images/MenNike3.webp';
+import NikeShoes4 from '../assets/assets/images/MenNike4.webp';
+import NikeShoes5 from '../assets/assets/images/NikeWomen5.webp'
+import NikeShoes6 from '../assets/assets/images/NikeWomen6.webp'
+import NikeShoes7 from '../assets/assets/images/NikeWomen7.webp'
+import NikeShoes8 from '../assets/assets/images/MenNike5.webp';
+import NikeShoes9 from '../assets/assets/images/MenNike6.webp';
 
-import NBshoes1 from '../assets/assets/images/NBshoes1.jpg'
-import NBshoes2 from '../assets/assets/images/NBshoes2.jpg'
-import NBshoes3 from '../assets/assets/images/NBshoes3.jpg'
-import NBshoes4 from '../assets/assets/images/NBshoes4.jpg'
-import NBshoes5 from '../assets/assets/images/NBshoes5.jpg'
-import NBshoes6 from '../assets/assets/images/NBshoes6.jpg'
+import NBshoes1 from '../assets/assets/images/MenNB1.webp'
+import NBshoes2 from '../assets/assets/images/MenNB2.webp'
+import NBshoes3 from '../assets/assets/images/MenNB3.webp'
+import NBshoes4 from '../assets/assets/images/MenNB4.webp'
+import NBshoes5 from '../assets/assets/images/NBwomen5.webp'
+import NBshoes6 from '../assets/assets/images/NBwomen6.webp'
+import NBshoes7 from '../assets/assets/images/NBwomen7.webp'
 
-import JordanShoes1 from '../assets/assets/images/JordanShoes1.jpg'
-import JordanShoes2 from '../assets/assets/images/JordanShoes2.jpg'
-import JordanShoes3 from '../assets/assets/images/JordanShoes3.jpg'
-import JordanShoes4 from '../assets/assets/images/JordanShoes4.jpg'
-import JordanShoes5 from '../assets/assets/images/JordanShoes5.jpg'
-import JordanShoes6 from '../assets/assets/images/JordanShoes6.jpg'
+import JordanShoes1 from '../assets/assets/images/MenJordan1.webp'
+import JordanShoes2 from '../assets/assets/images/MenJordan2.webp'
+import JordanShoes3 from '../assets/assets/images/MenJordan3.webp'
+import JordanShoes4 from '../assets/assets/images/MenJordan4.webp'
+import JordanShoes5 from '../assets/assets/images/MenJordan5.webp'
+import JordanShoes6 from '../assets/assets/images/MenJordan6.webp'
+import JordanShoes7 from '../assets/assets/images/MenJordan7.webp'
+import JordanShoes8 from '../assets/assets/images/MenJordan8.webp'
+import JordanShoes9 from '../assets/assets/images/MenJordan9.webp'
+import JordanShoes10 from '../assets/assets/images/MenJordan10.webp'
 
-import AdidasShoes1 from '../assets/assets/images/AdidasShoes1.jpg'
-import AdidasShoes2 from '../assets/assets/images/AdidasShoes2.jpg'
-import AdidasShoes3 from '../assets/assets/images/AdidasShoes3.jpg'
-import AdidasShoes4 from '../assets/assets/images/AdidasShoes4.jpg'
-import AdidasShoes5 from '../assets/assets/images/AdidasShoes5.jpg'
-import AdidasShoes6 from '../assets/assets/images/AdidasShoes6.jpg'
+import AdidasShoes1 from '../assets/assets/images/MenAdidas1.webp'
+import AdidasShoes2 from '../assets/assets/images/MenAdidas2.webp'
+import AdidasShoes3 from '../assets/assets/images/MenAdidas3.webp'
+import AdidasShoes4 from '../assets/assets/images/MenAdidas4.webp'
+import AdidasShoes5 from '../assets/assets/images/MenAdidas5.webp'
+import AdidasShoes6 from '../assets/assets/images/MenAdidas6.webp'
 
-import BalanciagaShoe1 from '../assets/assets/images/BalanciagaShoe1.jpg'
-import BalanciagaShoe2 from '../assets/assets/images/BalanciagaShoe2.jpg'
-import BalanciagaShoe3 from '../assets/assets/images/BalanciagaShoe3.jpg'
-import BalanciagaShoe4 from '../assets/assets/images/BalanciagaShoe4.jpg'
-import BalanciagaShoe5 from '../assets/assets/images/BalanciagaShoe5.jpg'
-import BalanciagaShoe6 from '../assets/assets/images/BalanciagaShoe6.jpg'
+import BalanciagaShoe1 from '../assets/assets/images/MenBalanciaga1.jpg'
+import BalanciagaShoe2 from '../assets/assets/images/MenBalanciaga2.jpg'
+import BalanciagaShoe3 from '../assets/assets/images/MenBalanciaga3.jpg'
+import BalanciagaShoe4 from '../assets/assets/images/MenBalanciaga4.jpg'
+import BalanciagaShoe5 from '../assets/assets/images/MenBalanciaga5.jpg'
+import BalanciagaShoe6 from '../assets/assets/images/MenBalanciaga6.jpg'
+import BalanciagaShoe7 from '../assets/assets/images/MenBalanciaga7.jpg'
+import BalanciagaShoe8 from '../assets/assets/images/MenBalanciaga8.jpg'
 
 //women shoes
 import BalanciagaWomen1 from '../assets/assets/images/BalanciagaWomen6.jpg'
@@ -117,7 +128,6 @@ export const navLinks = [
     { href: "/women", label: "Women" },
     { href: "/men", label: "Men" },
     { href: "/about-us", label: "About Us" },
-    { href: "/contact-us", label: "Contact Us" },
 ];
 
 export const shoes = [
@@ -145,22 +155,22 @@ export const products = [
     {
         imgURL: shoe4,
         name: "Nike Air Jordan-01",
-        price: "$200.20",
+        price: "$400.20",
     },
     {
         imgURL: shoe5,
-        name: "Nike Air Jordan-10",
-        price: "$210.20",
+        name: "Jordan Legacy MVP",
+        price: "$280.20",
     },
     {
         imgURL: shoe6,
         name: "Nike Air Jordan-100",
-        price: "$220.20",
+        price: "$320.20",
     },
     {
         imgURL: shoe7,
-        name: "Nike Air Jordan-001",
-        price: "$230.20",
+        name: "New Balance Running-00",
+        price: "$430.20",
     },
 ];
 
@@ -280,35 +290,30 @@ export const gender = [
 
 export const listOfMenShoes = [
     //puma
-     { imgURL: PumaWomen1, rating: 4.5, BrandName: "PUMA Men's Flyer Flex Running", Color: 1, Price: 380,},
-    { imgURL: PumaWomen2,  rating: 4.5, BrandName: "PUMA Men's Roma Basic", Color: 1, Price: 199,},
-    { imgURL: PumaWomen3,  rating: 4.5, BrandName: "PUMA Magnify Nitro Mens", Color: 1, Price: 259,},
-    { imgURL: PumaWomen4,   rating: 4.5, BrandName: "PUMA Mens Magnify Nitro", Color: 1, Price: 176,},
-    { imgURL: PumaWomen5,  rating: 4.5, BrandName: "PUMA Mens Jaro Shoes", Color: 1, Price: 139,},
-    { imgURL: PumaWomen6,  rating: 4.5, BrandName: "PUMA Mens Rebound JOY", Color: 1, Price: 188,},
-    { imgURL: PumaWomen7,  rating: 4.5, BrandName: "PUMA Mens Rebound Lan", Color: 1, Price: 167,},
-    { imgURL: PumaWomen8,  rating: 4.5, BrandName: "PUMA Mens Rebound Lan", Color: 1, Price: 167,},
+    { imgURL: pumaShoe1, rating: 4.5, BrandName: "PUMA Men's Football viom", Color: 1, Price: 380,},
+    { imgURL: pumaShoe2,  rating: 4.5, BrandName: "PUMA Men's Roma Basic", Color: 1, Price: 199,},
+    { imgURL: pumaShoe3,  rating: 4.5, BrandName: "PUMA Football bane", Color: 1, Price: 259,},
+    { imgURL: pumaShoe4,   rating: 4.5, BrandName: "PUMA Mens Magnify Nitro", Color: 1, Price: 176,},
+    { imgURL: pumaShoe5,  rating: 4.5, BrandName: "PUMA Mens Jaro Shoes", Color: 1, Price: 139,},
+    { imgURL: pumaShoe6,  rating: 4.5, BrandName: "PUMA Mens Rebound JOY", Color: 1, Price: 188,},
+    { imgURL: pumaShoe7,  rating: 4.5, BrandName: "PUMA Mens Rebound Lan", Color: 1, Price: 167,},
     // Adidas
-    { imgURL: AdidasWomen1,  rating: 4.5,BrandName: "Adidas Terex walking Shoes", Color: 1, Price: 120, },
-    { imgURL: AdidasWomen2,  rating: 4.5, BrandName: "Adidas Men's Zx Sneaker", Color: 1, Price:140,},
-    { imgURL: AdidasWomen3, rating: 4.5, BrandName: "Adidas Adizero SL Mens", Color: 1, Price: 190,},
-    { imgURL: AdidasWomen4,  rating: 4.5, BrandName: "Adidas Supernova + Mens", Color: 1, Price: 900,},
-    { imgURL: AdidasWomen5,  rating: 4.5, BrandName: "Adidas Men's Alphaboost V1", Color: 1, Price: 499,},
-    { imgURL: AdidasWomen6,  rating: 4.5, BrandName: "Adidas Terrex Tracerocker", Color: 1, Price: 609,}, 
-    { imgURL: AdidasWomen7,  rating: 4.5, BrandName: "Adidas Terrex Tracerocker", Color: 1, Price: 609,}, 
-    { imgURL: AdidasWomen8,  rating: 4.5, BrandName: "Adidas Terrex Tracerocker", Color: 1, Price: 609,}, 
-    { imgURL: AdidasWomen9,  rating: 4.5, BrandName: "Adidas Terrex Tracerocker", Color: 1, Price: 609,}, 
-    { imgURL: AdidasWomen10,  rating: 4.5, BrandName: "Adidas Terrex Tracerocker", Color: 1, Price: 609,}, 
+    { imgURL: AdidasShoes1,  rating: 4.5,BrandName: "Adidas Terex walking Shoes", Color: 1, Price: 120, },
+    { imgURL: AdidasShoes2,  rating: 4.5, BrandName: "Adidas Men's Zx Sneaker", Color: 1, Price:140,},
+    { imgURL: AdidasShoes3, rating: 4.5, BrandName: "Adidas Adizero SL Mens", Color: 1, Price: 190,},
+    { imgURL: AdidasShoes4,  rating: 4.5, BrandName: "Adidas Supernova + Mens", Color: 1, Price: 900,},
+    { imgURL: AdidasShoes5,  rating: 4.5, BrandName: "Adidas Men's Alphaboost V1", Color: 1, Price: 499,},
+    { imgURL: AdidasShoes6,  rating: 4.5, BrandName: "Adidas Terrex Tracerocker", Color: 1, Price: 609,}, 
     // Balanciaga
-    { imgURL: BalanciagaWomen1, rating: 4.5, BrandName: "Balanciaga Speed Lace-Up", Color: 1, Price: 149,},
-    { imgURL: BalanciagaWomen2, rating: 4.5, BrandName: "Balanciaga Phantom vibe-Top", Color: 1, Price: 770,},
-    { imgURL: BalanciagaWomen3,  rating: 4.5,BrandName: "Balanciaga Triple S Nylon", Color: 1, Price: 89, },
-    { imgURL: BalanciagaWomen4,  rating: 4.5, BrandName: "Balanciaga Rhino Derby", Color: 1, Price: 320,},
-    { imgURL: BalanciagaWomen5,  rating: 4.5, BrandName: "Balanciaga-Hummer Derby", Color: 1, Price: 127,},
-    { imgURL: BalanciagaWomen6,  rating: 4.5, BrandName: "Balanciaga Men's Triple S", Color: 1, Price: 79,},
-    { imgURL: BalanciagaWomen7, rating: 4.5, BrandName: "Balanciaga Phantom Low-Top", Color: 1, Price: 620,},
-    { imgURL: BalanciagaWomen8, rating: 4.5, BrandName: "Balanciaga Phantom Runer", Color: 1, Price: 490,},
-    { imgURL: BalanciagaWomen9, rating: 4.5, BrandName: "Balanciaga Phantom Runer", Color: 1, Price: 410,},
+    { imgURL: BalanciagaShoe1, rating: 4.5, BrandName: "Balanciaga Speed Lace-Up", Color: 1, Price: 849,},
+    { imgURL: menShoeOne, rating: 4.5, BrandName: "Balanciaga Phantom vibe-Top", Color: 1, Price: 770,},
+    { imgURL: BalanciagaShoe4,  rating: 4.5,BrandName: "Balanciaga Triple S Nylon", Color: 1, Price: 1189, },
+    { imgURL: BalanciagaShoe5,  rating: 4.5, BrandName: "Balanciaga Rhino Derby", Color: 1, Price: 620,},
+    { imgURL: BalanciagaShoe3,  rating: 4.5, BrandName: "Balanciaga-Hummer Derby", Color: 1, Price: 427,},
+    { imgURL: BalanciagaShoe2,  rating: 4.5, BrandName: "Balanciaga Men's Triple S", Color: 1, Price: 979,},
+    { imgURL: BalanciagaShoe6, rating: 4.5, BrandName: "Balanciaga Phantom Low-Top", Color: 1, Price: 520,},
+    { imgURL: BalanciagaShoe7, rating: 4.5, BrandName: "Balanciaga Phantom Runer", Color: 1, Price: 490,},
+    { imgURL: BalanciagaShoe8, rating: 4.5, BrandName: "Balanciaga Phantom Runer", Color: 1, Price: 990,},
     // New Balance
     { imgURL: NBshoes1,  rating: 4.5, BrandName: "New Balance 610", Color: 1, Price: 520,},
     { imgURL: NBshoes2,  rating: 4.5, BrandName: "New Balance Running Shoes", Color: 1, Price: 739,},
@@ -316,6 +321,7 @@ export const listOfMenShoes = [
     { imgURL: NBshoes4,  rating: 4.5, BrandName:"New Balance 430V2 Running" , Color: 1, Price: 129,},
     { imgURL: NBshoes5,  rating: 4.5, BrandName: "New Balance Roav Running", Color: 1, Price: 699,},
     { imgURL: NBshoes6,  rating: 4.5, BrandName: "New Balance Arishi V4", Color: 1, Price: 459,},
+    { imgURL: NBshoes7,  rating: 4.5, BrandName: "New Balance Arishi V4", Color: 1, Price: 599,},
     // Nike
     { imgURL: NikeShoes1, rating: 4.5, BrandName: "Nike SB Dunk Pro", Color: 1, Price: 199,},
     { imgURL: NikeShoes2, rating: 4.5, BrandName: "Nike Air Force 1'07", Color: 1, Price: 110,},
@@ -323,45 +329,56 @@ export const listOfMenShoes = [
     { imgURL: NikeShoes4, rating: 4.5, BrandName: "Nike Air Max Plus Utility", Color: 1, Price: 140,},
     { imgURL: NikeShoes5, rating: 4.5, BrandName: "Nike SB Lawn Lu", Color: 1, Price: 120,},
     { imgURL: NikeShoes6, rating: 4.5, BrandName: "Nike TS Mike tem", Color: 1, Price: 140,},
-    { imgURL: menShoeThree, rating: 4.5, BrandName: "Nike TS Mike tem", Color: 1, Price: 140,},
-    { imgURL: menShoeFour, rating: 4.5, BrandName: "Nike TS Lam Sham", Color: 1, Price: 140,},
-    { imgURL: menShoeFive, rating: 4.5, BrandName: "Nike TS Tarn blnk", Color: 1, Price: 140,},
+    { imgURL: NikeShoes7, rating: 4.5, BrandName: "Nike TS Mike tem", Color: 1, Price: 740,},
+    { imgURL: NikeShoes8, rating: 4.5, BrandName: "Nike TS Mike tem", Color: 1, Price: 440,},
+    { imgURL: NikeShoes9, rating: 4.5, BrandName: "Nike TS Mike tem", Color: 1, Price: 340,},
+    
     // Jordan
     { imgURL: JordanShoes1, rating: 4.5, BrandName: "Jordan Luka 2 Men S", Color: 1, Price: 200,},
     { imgURL: JordanShoes2, rating: 4.5, BrandName: "Jordan Tatum", Color: 1, Price: 270,},
-    { imgURL: JordanShoes3,  rating: 4.5, BrandName: "Jordan Legacy MVP", Color: 1, Price: 90,},
+    { imgURL: JordanShoes3,  rating: 4.5, BrandName: "Jordan Legacy MVP", Color: 1, Price: 190,},
     { imgURL: JordanShoes4, rating: 4.5, BrandName: "Jordan Retro 2 Men", Color: 1, Price: 310,},
     { imgURL: JordanShoes5, rating: 4.5, BrandName: "Jordan Jumpman pro", Color: 1, Price:240,},
     { imgURL: JordanShoes6, rating: 4.5, BrandName: "Jordan 1 Low SE", Color: 1, Price: 405,},
+    { imgURL: JordanShoes7, rating: 4.5, BrandName: "Jordan 1 Low SE", Color: 1, Price: 555,},
+    { imgURL: JordanShoes8, rating: 4.5, BrandName: "Jordan 1 Low SE", Color: 1, Price: 705,},
+    { imgURL: JordanShoes9, rating: 4.5, BrandName: "Jordan 1 Low SE", Color: 1, Price: 605,},
+    { imgURL: JordanShoes10, rating: 4.5, BrandName: "Jordan 1 Low SE", Color: 1, Price: 415,},
 ]
 
 //WOMEN SHOES
 
 export const listOfWomenShoes = [
     //puma
-     { imgURL: pumaShoe1, rating: 4.5, BrandName: "PUMA Women's Flyer Flex Running", Color: 1, Price: 380,},
-    { imgURL: pumaShoe2,  rating: 4.5, BrandName: "PUMA Women's Roma Basic", Color: 1, Price: 199,},
-    { imgURL: pumaShoe3,  rating: 4.5, BrandName: "PUMA Magnify Nitro Womens", Color: 1, Price: 259,},
-    { imgURL: pumaShoe4,   rating: 4.5, BrandName: "PUMA Womens Magnify Nitro", Color: 1, Price: 176,},
-    { imgURL: pumaShoe5,  rating: 4.5, BrandName: "PUMA Womens Jaro Shoes", Color: 1, Price: 139,},
-    { imgURL: pumaShoe6,  rating: 4.5, BrandName: "PUMA Womens Rebound JOY", Color: 1, Price: 188,},
-    { imgURL: menShoeTwo,  rating: 4.5, BrandName: "PUMA Womens Rebound Lan", Color: 1, Price: 167,},
+    { imgURL: PumaWomen1, rating: 4.5, BrandName: "PUMA Women's Flyer Flex Running", Color: 1, Price: 380,},
+    { imgURL: PumaWomen2,  rating: 4.5, BrandName: "PUMA Women's Roma Basic", Color: 1, Price: 199,},
+    { imgURL: PumaWomen3,  rating: 4.5, BrandName: "PUMA Magnify Nitro Mens", Color: 1, Price: 259,},
+    { imgURL: PumaWomen4,   rating: 4.5, BrandName: "PUMA Women's Magnify Nitro", Color: 1, Price: 176,},
+    { imgURL: PumaWomen5,  rating: 4.5, BrandName: "PUMA Women's Jaro Shoes", Color: 1, Price: 139,},
+    { imgURL: PumaWomen6,  rating: 4.5, BrandName: "PUMA Women's Rebound JOY", Color: 1, Price: 188,},
+    { imgURL: PumaWomen7,  rating: 4.5, BrandName: "PUMA Women's Rebound Lan", Color: 1, Price: 167,},
+    { imgURL: PumaWomen8,  rating: 4.5, BrandName: "PUMA Women's Rebound Lan", Color: 1, Price: 167,},   
     // Adidas
-    { imgURL: AdidasShoes1,  rating: 4.5,BrandName: "Adidas Terex walking Shoes", Color: 1, Price: 120, },
-    { imgURL: AdidasShoes2,  rating: 4.5, BrandName: "Adidas Women's Zx Sneaker", Color: 1, Price:140,},
-    { imgURL: AdidasShoes3, rating: 4.5, BrandName: "Adidas Adizero SL Mens", Color: 1, Price: 190,},
-    { imgURL: AdidasShoes4,  rating: 4.5, BrandName: "Adidas Supernova + Mens", Color: 1, Price: 900,},
-    { imgURL: AdidasShoes5,  rating: 4.5, BrandName: "Adidas Women's Alphaboost V1", Color: 1, Price: 499,},
-    { imgURL: AdidasShoes6,  rating: 4.5, BrandName: "Adidas Terrex Tracerocker", Color: 1, Price: 609,}, 
+    { imgURL: AdidasWomen1,  rating: 4.5,BrandName: "Adidas Terex walking Shoes", Color: 1, Price: 120, },
+    { imgURL: AdidasWomen2,  rating: 4.5, BrandName: "Adidas Women's Zx Sneaker", Color: 1, Price:140,},
+    { imgURL: AdidasWomen3, rating: 4.5, BrandName: "Adidas Adizero SL Womens", Color: 1, Price: 190,},
+    { imgURL: AdidasWomen4,  rating: 4.5, BrandName: "Adidas Supernova + Womens", Color: 1, Price: 900,},
+    { imgURL: AdidasWomen5,  rating: 4.5, BrandName: "Adidas Women's Alphaboost V1", Color: 1, Price: 499,},
+    { imgURL: AdidasWomen6,  rating: 4.5, BrandName: "Adidas Terrex Tracerocker", Color: 1, Price: 609,}, 
+    { imgURL: AdidasWomen7,  rating: 4.5, BrandName: "Adidas Terrex Tracerocker", Color: 1, Price: 609,}, 
+    { imgURL: AdidasWomen8,  rating: 4.5, BrandName: "Adidas Terrex Tracerocker", Color: 1, Price: 609,}, 
+    { imgURL: AdidasWomen9,  rating: 4.5, BrandName: "Adidas Terrex Tracerocker", Color: 1, Price: 609,}, 
+    { imgURL: AdidasWomen10,  rating: 4.5, BrandName: "Adidas Terrex Tracerocker", Color: 1, Price: 609,},
     // Balanciaga
-    { imgURL: BalanciagaShoe1, rating: 4.5, BrandName: "Balanciaga Speed Lace-Up", Color: 1, Price: 149,},
-    { imgURL: menShoeOne, rating: 4.5, BrandName: "Balanciaga Phantom vibe-Top", Color: 1, Price: 770,},
-    { imgURL: BalanciagaShoe4,  rating: 4.5,BrandName: "Balanciaga Triple S Nylon", Color: 1, Price: 89, },
-    { imgURL: BalanciagaShoe5,  rating: 4.5, BrandName: "Balanciaga Rhino Derby", Color: 1, Price: 320,},
-    { imgURL: BalanciagaShoe3,  rating: 4.5, BrandName: "Balanciaga-Hummer Derby", Color: 1, Price: 127,},
-    { imgURL: BalanciagaShoe2,  rating: 4.5, BrandName: "Balanciaga Women's Triple S", Color: 1, Price: 79,},
-    { imgURL: BalanciagaShoe6, rating: 4.5, BrandName: "Balanciaga Phantom Low-Top", Color: 1, Price: 620,},
-    { imgURL: menShoe, rating: 4.5, BrandName: "Balanciaga Phantom Runer", Color: 1, Price: 490,},
+    { imgURL: BalanciagaWomen1, rating: 4.5, BrandName: "Balanciaga Speed Lace-Up", Color: 1, Price: 849,},
+    { imgURL: BalanciagaWomen2, rating: 4.5, BrandName: "Balanciaga Phantom vibe-Top", Color: 1, Price: 770,},
+    { imgURL: BalanciagaWomen3,  rating: 4.5,BrandName: "Balanciaga Triple S Nylon", Color: 1, Price: 889, },
+    { imgURL: BalanciagaWomen4,  rating: 4.5, BrandName: "Balanciaga Rhino Derby", Color: 1, Price: 320,},
+    { imgURL: BalanciagaWomen5,  rating: 4.5, BrandName: "Balanciaga-Hummer Derby", Color: 1, Price: 727,},
+    { imgURL: BalanciagaWomen6,  rating: 4.5, BrandName: "Balanciaga Women's Triple S", Color: 1, Price: 479,},
+    { imgURL: BalanciagaWomen7, rating: 4.5, BrandName: "Balanciaga Phantom Low-Top", Color: 1, Price: 620,},
+    { imgURL: BalanciagaWomen8, rating: 4.5, BrandName: "Balanciaga Phantom Runer", Color: 1, Price: 490,},
+    { imgURL: BalanciagaWomen9, rating: 4.5, BrandName: "Balanciaga Phantom Runer", Color: 1, Price: 410,},
     // New Balance
     { imgURL: NBwomen1,  rating: 4.5, BrandName: "New Balance 610", Color: 1, Price: 520,},
     { imgURL: NBwomen2,  rating: 4.5, BrandName: "New Balance Running Shoes", Color: 1, Price: 739,},
@@ -369,6 +386,7 @@ export const listOfWomenShoes = [
     { imgURL: NBwomen4,  rating: 4.5, BrandName:"New Balance 430V2 Running" , Color: 1, Price: 129,},
     { imgURL: NBwomen5,  rating: 4.5, BrandName: "New Balance Roav Running", Color: 1, Price: 699,},
     { imgURL: NBwomen6,  rating: 4.5, BrandName: "New Balance Arishi V4", Color: 1, Price: 459,},
+    { imgURL: NBwomen7,  rating: 4.5, BrandName: "New Balance Arishi V4", Color: 1, Price: 397,},
     // Nike
     { imgURL: NikeWomen1, rating: 4.5, BrandName: "Nike SB Dunk Pro", Color: 1, Price: 199,},
     { imgURL: NikeWomen2, rating: 4.5, BrandName: "Nike Air Force 1'07", Color: 1, Price: 110,},

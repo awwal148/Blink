@@ -38,7 +38,7 @@ const Main = () => (
          <Route  path="newbalance" element={<NewBalance />}/>
        </Route>
       <Route path="/women" element={< Women />} >
-        <Route  path="AllShoes" element={<WomenAllShoes/>}/> 
+        <Route path="AllShoes" element={<WomenAllShoes />} />
          <Route  path="nike" element={<WomenNike />}/> 
          <Route  path="Adidas" element={<WomenAdidas />}/> 
           <Route  path="jordan" element={<WomenJordan />}/>
@@ -47,7 +47,6 @@ const Main = () => (
          <Route  path="newbalance" element={<WomenNB />}/>
       </Route>
       <Route path="/about-us" element={<About />} />
-      <Route path="/contact-us" element={<Contact />} />
       <Route path="*" element={<Notfound />} />
     </Routes>
   </main>

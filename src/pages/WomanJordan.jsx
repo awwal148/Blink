@@ -1,15 +1,15 @@
 import React from 'react';
 import { listOfWomenShoes, gender } from '../constants';
-import { useFilter } from '../components/ContextApi.JSX';
+import { useWomenFilter } from '../components/ContextApi.JSX';
 
 const WomanJordan = () => {
-  // const {setBrandFilter} = useFilter();
+  const {  setWomenBrandFilter } = useWomenFilter();
   const currentBrandName = "jordan"
   const nikeShoes = listOfWomenShoes.filter((shoe) => shoe.BrandName.toLowerCase().includes(currentBrandName));
 
-  // React.useEffect(() => {
-  //   setBrandFilter(currentBrandName)
-  // },[setBrandFilter])
+  React.useEffect(() => {
+    setWomenBrandFilter(currentBrandName)
+  },[setWomenBrandFilter])
   return (
     <section className='shoe-grid w-full mt-14 bg-white max-container'>
       {nikeShoes.map((shoe) => {
@@ -25,7 +25,7 @@ const WomanJordan = () => {
            <p className="tracking-widest text-coral-red text-lg mt-2 max-sm:text-[0.80rem]">
               {gender.map((item) => (
                  <span key={item.women}>
-                  {item.men}
+                  {item.women}
                   </span>
               ))}
             </p>

@@ -1,12 +1,16 @@
 import React from "react"
 import { gender, listOfWomenShoes } from "../constants"
-import { useFilter } from "../components/ContextApi.JSX"
+import { useWomenFilter } from "../components/ContextApi.JSX"
 const WomenAllShoes = () => {  
-    const { setBrandFilter } = useFilter();
+    const { setWomenBrandFilter } = useWomenFilter();
 
      React.useEffect(() => {
-    setBrandFilter(''); // Clear the filter for all shoes
-  }, [setBrandFilter]);
+    try {
+      setWomenBrandFilter(''); // Clear the filter for all shoes
+    } catch (error) {
+      console.error('Error setting brand filter:', error);
+    }
+  }, [setWomenBrandFilter])
   return (
     <section className="shoe-grid w-full mt-14 bg-white max-container">
     {listOfWomenShoes.map((shoe) => {
