@@ -17,6 +17,10 @@
     max-width: 1460px;
     margin: 0 auto;
   }
+.min-container {
+  max-width: 100%;
+  margin: 0;
+}
 
   .input {
     @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
@@ -107,6 +111,8 @@
   justify-content: space-between;
 }
 
+
+
 .shoe-grid-item {
   width: calc(100% / 3);
   width: calc(33.33% - 12px);
@@ -118,7 +124,10 @@
     width: calc(100% / 2);
     width: calc(50% - 10px);
   }
-  
+    .about-item {
+      width: calc(100% / 3);
+      width: calc(33.33% - 12px);
+    }
   .shoe-about {
       display: flex;
       flex-direction: column;
