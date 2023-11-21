@@ -8,19 +8,25 @@ const Hero = () => {
   const [bigShoeImg, setBigShoeImg ] = useState(bigShoe1)
   return (
     <section 
-    id="home"
     className="w-full flex xl:flex-row flex-col  justify-center min-h-screen gap-10  max-container"
     >
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
         <p className="text-xl font-montserrat text-coral-red sm:pt-6">Our Summer Collection</p>
-        <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82] font-bold">
+        
+        <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] font-bold">
           <span className="xl:bg-white xl:whitespace-nowrap relative lg:z-10 pr-10"> The New Arrival</span>
           <br />
           <span className="text-coral-red inline-block mt-3">Blink</span> Shoes
         </h1>
         <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">Discover stylish Blink arrivals, quality comfort, and innovation for your active life, with products from your favorite Brands.</p>
-        
-        <Button  label="shop now" iconURL={arrowRight}/>
+        <div className="flex gap-3 max-sm:flex-col-reverse">  
+        <a href="/women">
+                    <Button  label="WOMEN SHOES" iconURL={arrowRight}/>
+             </a>
+        <a href="/men">
+                    <Button  label="MEN SHOES" iconURL={arrowRight}/>
+             </a>
+             </div>
 
         <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
           { statistics.map((stat) => (
@@ -32,7 +38,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative flex-2 flex justify-center items-center xl:main-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center ">
+      <div className="relative flex-1 flex justify-center items-center xl:main-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center ">
         <img 
         src={bigShoeImg}
         alt="shoe collection"

@@ -1,4 +1,11 @@
-import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/assets/icons";
+import { facebook, instagram, shieldTick, support, truckFast, twitter, } from "../assets/assets/icons";
+import aboutIcon1 from "../assets/assets/icons/about-icon1.svg"
+import aboutIcon2 from "../assets/assets/icons/about-icon2.svg"
+import aboutIcon3 from "../assets/assets/icons/about-icon3.svg"
+import aboutIcon4 from "../assets/assets/icons/about-icon4.svg"
+import aboutIcon5 from "../assets/assets/icons/about-icon5.svg"
+import aboutIcon6 from "../assets/assets/icons/about-icon6.svg"
+
 import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/assets/images";
 
 import menShoe from '../assets/assets/images/men-shoe.jpg';
@@ -159,7 +166,7 @@ export const products = [
     },
     {
         imgURL: shoe5,
-        name: "Jordan Legacy MVP",
+        name: "Adidas Legacy MVP",
         price: "$280.20",
     },
     {
@@ -404,3 +411,11 @@ export const listOfWomenShoes = [
     { imgURL: JordanWomen6, rating: 4.5, BrandName: "Jordan 1 Low SE", Color: 1, Price: 405,},
 ]
 
+export const aboutSec = [
+    { icon: aboutIcon1, title: 'Blink Verified', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eius. Blanditiis dolorum nesciunt repellendus numquam eos, dolore, amet explicabo quibusdam similique quae id repellat error. Earum, quasi.' },
+    { icon: aboutIcon2, title: 'Transparent Pricing', text: 'SLorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eius. Blanditiis dolorum nesciunt repellendus numquam eos, dolore, amet explicabo quibusdam similique quae id repellat error. Earum, quasi.' },
+    { icon: aboutIcon3, title: 'Global Access', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eius. Blanditiis dolorum nesciunt repellendus numquam eos, dolore, amet explicabo quibusdam similique quae id repellat error. Earum, quasi.' },
+    { icon: aboutIcon4, title: 'No BS', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eius. Blanditiis dolorum nesciunt repellendus numquam eos, dolore, amet explicabo quibusdam similique quae id repellat error. Earum, quasi.' },
+    { icon: aboutIcon5, title: 'Secure', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eius. Blanditiis dolorum nesciunt repellendus numquam eos, dolore, amet explicabo quibusdam similique quae id repellat error. Earum, quasi.' },
+    { icon: aboutIcon6, title: 'Here For You', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eius. Blanditiis dolorum nesciunt repellendus numquam eos, dolore, amet explicabo quibusdam similique quae id repellat error. Earum, quasi.' },
+];

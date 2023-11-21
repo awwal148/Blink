@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" style="enable-background:new 0 0 90 75;" version="1.1" viewBox="0 0 90 75" x="0px" y="0px">
+<style type="text/css">
+	.st0{fill:#221F1F;}
+	.st1{fill:#006340;}
+</style>
+<path class="st0" d="M61.3,30.7h-2v-7.4c0-7.9-6.4-14.3-14.3-14.3s-14.3,6.4-14.3,14.3v7.4h-2v-7.4c0-9,7.3-16.3,16.3-16.3&#xA;	c9,0,16.3,7.3,16.3,16.3V30.7z"/>
+<circle class="st1" cx="45" cy="44.9" r="6.5"/>
+<path class="st1" d="M41.1,48.8v6.7c0,2.1,1.7,3.9,3.9,3.9s3.9-1.7,3.9-3.9v-6.7"/>
+<path class="st0" d="M70.8,68.1H19.2V29.7h51.6V68.1z M21.2,66.1h47.6V31.7H21.2V66.1z"/>
+</svg>

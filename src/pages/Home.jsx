@@ -24,9 +24,9 @@ const Home = () => {
     <section className="padding">
       <SpecialOffers />
     </section>
-    <section className="padding">
+    {/* <section className="padding">
       <ShoeBanner />
-    </section>
+    </section> */}
     <section className="bg-pale-blue padding">
       <CustomersReviews />
     </section>

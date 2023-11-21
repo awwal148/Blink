@@ -118,5 +118,22 @@
     width: calc(100% / 2);
     width: calc(50% - 10px);
   }
+  
+  .shoe-about {
+      display: flex;
+      flex-direction: column;
+    }
+    .aboutflex{
+      display: flex;
+      flex-direction: column;
+    }
+    .aboutrem {
+      margin: 0 4rem;
+    }
+}
+
+
+.bg-cards {
+  background-image: url('assets/assets/images/thumbnail-background.svg');
 }
 
