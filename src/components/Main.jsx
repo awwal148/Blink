@@ -23,6 +23,7 @@ import WomenNB from '../pages/WomanNB'
 
 import { Routes, Route } from 'react-router-dom';
 import Contact from '../pages/Contact';
+import Cart from '../pages/Cart';
 
 const Main = () => (
   <main className="relative">
@@ -47,6 +48,7 @@ const Main = () => (
          <Route  path="newbalance" element={<WomenNB />}/>
       </Route>
       <Route path="/about-us" element={<About />} />
+      <Route path="/cart" element={<Cart />} />
       <Route path="*" element={<Notfound />} />
     </Routes>
   </main>

@@ -1,6 +1,8 @@
 import { hamburger } from '../assets/assets/icons';
 import { navLinks } from '../constants';
 import iconClose  from '../assets/assets/icons/icon-close.svg';
+import iconAccount  from '../assets/assets/icons/icons8-account-32.png'
+import iconCart  from '../assets/assets/icons/icons8-add-to-cart-24.png'
 import BrandLogo  from '../assets/assets/images/BrandLogo.png';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -30,13 +32,23 @@ const Nav = () => {
                     </li>
                 ))}
             </ul>
+            <div className="flex justify-between gap-6 max-lg:hidden">
+              <img src={iconAccount} alt='img' className='w-[2.5rem] cursor-pointer'/>
+            <Link to="/cart">
+              <img src={iconCart} alt='img' className='w-[2.2rem] cursor-pointer'/>
+              </Link>
+            </div>
             <div className="hidden max-lg:block">
+              <div className="flex justify-between gap-4">
+               <img src={iconAccount} alt='img' className='w-[2.5rem] cursor-pointer'/>
+              <img src={iconCart} alt='img' className='w-[2.2rem] cursor-pointer'/>
                 <img 
                 src={hamburger} 
                 alt="hamburger"
                 width={25}
                 height={25}
                  onClick={NavMenuBtn}/>
+                 </div>
             </div>
         </nav>
         {navMenu && <div className='absolute top-0 right-0 bg-white w-[60%] min-h-[600px]  shadow-lg shadow-blue-500/50 p-10 animate-slideIn lg:hidden z-40'>
