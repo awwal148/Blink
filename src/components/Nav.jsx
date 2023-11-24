@@ -41,7 +41,9 @@ const Nav = () => {
             <div className="hidden max-lg:block">
               <div className="flex justify-between gap-4">
                <img src={iconAccount} alt='img' className='w-[2.5rem] cursor-pointer'/>
+               <Link to= "/cart">
               <img src={iconCart} alt='img' className='w-[2.2rem] cursor-pointer'/>
+              </Link>
                 <img 
                 src={hamburger} 
                 alt="hamburger"
