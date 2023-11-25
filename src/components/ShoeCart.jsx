@@ -5,6 +5,9 @@ const ShoeCart = (props) => {
     const { rating,  BrandName, Price, imgURL, Color } = props.data;
     const { cartItems, addToCart, removeFromCart, updateCartItemCount } = useContext(shopContext);
 
+    const cartCount = (e) => {
+        updateCartItemCount(Number(e.target.value), rating)
+    }
     
 
   return (
