@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from "react"
+import { shopContext } from "../Context/ShopContext"
 import iconCart from "../assets/assets/icons/icon-cart.svg"
 import { listOfMenShoes, gender } from '../constants';
 import { useFilter } from '../components/ContextApi.JSX';
 
 const Nike = () => {
+const { addToCart, cartItems  } = useContext(shopContext)
+
   const currentBrandName = "nike"
   const { setBrandFilter } = useFilter();
   const nikeShoes = listOfMenShoes.filter((shoe) => shoe.BrandName.toLowerCase().includes(currentBrandName));
@@ -16,6 +19,7 @@ const Nike = () => {
   return (
     <section className='shoe-grid w-full mt-14 bg-white max-container'>
       {nikeShoes.map((shoe) => {
+      const cartItemAmount = cartItems[shoe.rating];
       return (
         <div key={shoe.rating} className="shoe-grid-item shoe-flex hover:shadow-lg hover:shadow-white-500/50 box-border mb-2">
         <div className="w-[100%] h-[20rem] hover:h-[20.4rem] bg-slate-400">
@@ -37,7 +41,10 @@ const Nike = () => {
           </div>
            <div className="flex justify-between align-center px-6 mb-6 max-sm:px-2">
            <p className="text-black tracking-wider text-[20px] mt-3 mb-4 font-semibold max-sm:text-[0.90rem]">£{shoe.Price}.00</p>
-           <img src={iconCart} alt="img" className="w-[1rem] cursor-pointer" />
+          <div className="">
+           <img src={iconCart} onClick={() => addToCart(shoe.rating)} alt="img" className="w-[1.5rem] cursor-pointer object-center object-fill flex items-center justify-center" />
+           {cartItemAmount > 0 && <>{cartItemAmount}</>}
+           </div>
            </div>
         </div>
         </div>
