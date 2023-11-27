@@ -14,14 +14,15 @@ const Cart = () => {
     //sum of both totalAmount and womenTotalAmount
     const totalCartAmount = totalAmount + womenTotalAmount
 
-    console.log('totalAmount:', totalAmount);
-  console.log('womenTotalAmount:', womenTotalAmount);
-  console.log('allTotalAmount:', totalCartAmount);
+//     console.log('totalAmount:', totalAmount);
+//   console.log('womenTotalAmount:', womenTotalAmount);
+//   console.log('allTotalAmount:', totalCartAmount);
 
     const navigate = useNavigate()
   return (
     <section className='padding max-container'>
-        <div className="">
+        <div className="pt-3 mb-4">
+            <h1 className='font-bold text-[2.8rem]'>MY SHOPPING CART</h1>
         </div>
         <div className="">
             {listOfMenShoes.map((shoe) => {

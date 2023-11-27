@@ -15,7 +15,7 @@ const getWomenDefaultCart = () => {
 
 export const ShopWomenContextProvider = (props) => {
   const [womenCartItems, setWomenCartItems] = useState(() => {
-    const storedWomenCartItemsJSON = localStorage.getItem('cart');
+    const storedWomenCartItemsJSON = localStorage.getItem('womenCart');
     try {
       const storedWomenCartItems = JSON.parse(storedWomenCartItemsJSON);
       if (storedWomenCartItems) {
@@ -29,14 +29,15 @@ export const ShopWomenContextProvider = (props) => {
 
   // useEffect to store cartItems in local storage whenever it changes
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(womenCartItems));
+    localStorage.setItem('womenCart', JSON.stringify(womenCartItems));
   }, [womenCartItems]);
 
   const getWomenTotalCartAmount = () => {
     let womenTotalAmount = 0;
     for (const item in womenCartItems) {
       if (womenCartItems[item] > 0) {
-        let itemInfo = listOfWomenShoes.find((shoe) => shoe.rating === Number(item));
+        let itemInfo = listOfWomenShoes.find((shoe) => shoe.rating
+         === Number(item));
         itemInfo ? (womenTotalAmount += womenCartItems[item] * itemInfo.Price) : '';
       }
     }
