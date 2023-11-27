@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import { createContext } from 'react';
 import { listOfMenShoes } from '../constants';
@@ -13,6 +11,7 @@ const getDefaultCart = () => {
   }
   return cart;
 };
+
 
 export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(() => {
@@ -74,17 +73,5 @@ export const ShopContextProvider = (props) => {
 
   return <shopContext.Provider value={contextValue}>{props.children}</shopContext.Provider>;
 };
-
-
-
-
-
-
-
-
-
-
-
-
 
 
