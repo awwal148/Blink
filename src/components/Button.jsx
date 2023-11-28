@@ -1,4 +1,4 @@
-const Button = ( { label, iconURL, backgroundColor, textColor, borderColor, fullWidth, onClick, bg, about, icon} ) => {
+const Button = ( { label, iconURL, backgroundColor, textColor, borderColor, fullWidth, onClick, bg, about, icon, couponBtn } ) => {
   return (
    <button 
    onClick={onClick}
@@ -6,7 +6,7 @@ const Button = ( { label, iconURL, backgroundColor, textColor, borderColor, full
     
     ${backgroundColor ? `${backgroundColor} ${textColor} ${borderColor}` 
     : 'bg-coral-red text-white border-coral-red'} rounded-full ${fullWidth && 'w-full '} 
-     ${bg ? 'bg-slate-50 text-red-700' : ''} ${iconURL ? ' rounded-none' : ''} ${about ? ' rounded-none flex justify-between border-none' : ''}`}>
+     ${bg ? 'bg-slate-50 text-red-700' : ''} ${iconURL ? ' rounded-none' : ''} ${couponBtn ? ' rounded-none' : ''} ${about ? ' rounded-none flex justify-between border-none' : ''}`}>
         {label}
         {icon}
         {iconURL && <img 

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { gender } from '../constants';
 import { shopContext } from '../Context/ShopContext';
+import CartReturn from './CartReturn/CartReturn';
 
 const ShoeCart = (props) => {
     const { rating,  BrandName, Price, imgURL, Color } = props.data;
@@ -12,8 +13,8 @@ const ShoeCart = (props) => {
     
 
   return (
-    <section className="flex w-full h-[17rem] gap-3  lg:pb-4">
-        <div className="h-full p-[1rem] w-2/3 flex justify-between shadow-lg">
+    <section className=" w-[100%] h-[17rem] gap-3  lg:pb-4">
+        <div className="h-full p-[1rem] flex justify-between shadow-lg">
         <div className="flex gap-4">
             <div className="h-[full] w-[15rem]">
         <img src={imgURL} alt='img' />
@@ -36,14 +37,7 @@ const ShoeCart = (props) => {
             <p className='font-semibold text-[1.5rem]'>£{Price}</p>
             </div>
         </div>
-        <div className="w-1/3 h-full">
-            <div className="flex flex-col justify-center items-center shadow-lg py-2">
-            <h2 className='text-center font-semibold text-[1.2rem] text-coral-red'>YOU’VE EARNED FREE SHIPPING</h2>
-            </div>
-            <div className="flex flex-col justify-center items-center shadow-lg py-2">
-            <h2 className='text-center font-semibold text-[1rem] text-[#c5c2c0]'>FREE RETURNS ON ALL QUALIFYING ORDERS.</h2>
-            </div>
-        </div>
+        {/* <CartReturn /> */}
     </section>
   )
 }

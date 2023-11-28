@@ -1,29 +1,36 @@
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import { listOfMenShoes, listOfWomenShoes } from '../constants'
 import { shopContext } from '../Context/ShopContext'
 import ShoeCart from '../components/ShoeCart';
-import { useNavigate } from 'react-router-dom';
 import WomenShoeCart from '../components/WomenShoeCart';
 import { womenShopContext } from '../Context/WomenShopContext';
-
+import CartReturn from '../components/CartReturn/CartReturn';
+import { usePriceFilter } from '../Context/CartTotalContext';
 const Cart = () => {
+    const { setTotalFilter } = usePriceFilter();
     const { cartItems, getTotalCartAmount } = useContext(shopContext);
     const {womenCartItems, getWomenTotalCartAmount } = useContext(womenShopContext)
     const totalAmount = getTotalCartAmount();
     const womenTotalAmount = getWomenTotalCartAmount();
     //sum of both totalAmount and womenTotalAmount
-    const totalCartAmount = totalAmount + womenTotalAmount
+    const totalCartAmount = totalAmount + womenTotalAmount;
+
+     React.useEffect(() => {
+    setTotalFilter(totalCartAmount);
+  }, [totalCartAmount]);
+
 
 //     console.log('totalAmount:', totalAmount);
 //   console.log('womenTotalAmount:', womenTotalAmount);
 //   console.log('allTotalAmount:', totalCartAmount);
 
-    const navigate = useNavigate()
   return (
-    <section className='padding max-container'>
+    <section className='padding max-container box-border font-montserrat'>
         <div className="pt-3 mb-4">
             <h1 className='font-bold text-[2.8rem]'>MY SHOPPING CART</h1>
         </div>
+        <div className="flex">
+            <div className="w-2/3 pr-6">
         <div className="">
             {listOfMenShoes.map((shoe) => {
                 if (cartItems[shoe.rating] !== 0) {
@@ -36,7 +43,6 @@ const Cart = () => {
                 return null; 
             })}
         </div>
-
         {/* women cart */}
         <div className="">
             {listOfWomenShoes.map((shoe) => {
@@ -50,12 +56,16 @@ const Cart = () => {
                 return null; 
             })}
         </div>
+        </div>
+        { totalAmount > 0 ?
+        <div className="w-1/3">
+        <CartReturn />
+        </div> : "" }
+        </div>
 
         { totalCartAmount > 0 ? 
         <div className="">
-            <p>Subtotal: £{totalAmount}</p>
-            <button onClick={() => navigate(-1)} className='bg-slate-200 p-7'> continue shopping </button>
-            <button> Checkout </button>
+            
             <button onClick={() => localStorage.clear()} className='bg-slate-200 p-7'>Delete All Item</button>
         </div> : <h1>YOUR CART IS EMPTY</h1>}
     </section>
