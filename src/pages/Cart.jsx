@@ -65,8 +65,7 @@ const Cart = () => {
 
         { totalCartAmount > 0 ? 
         <div className="">
-            
-            <button onClick={() => localStorage.clear()} className='bg-slate-200 p-7'>Delete All Item</button>
+
         </div> : <h1>YOUR CART IS EMPTY</h1>}
     </section>
   )
