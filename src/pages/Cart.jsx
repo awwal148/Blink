@@ -6,6 +6,7 @@ import WomenShoeCart from '../components/WomenShoeCart';
 import { womenShopContext } from '../Context/WomenShopContext';
 import CartReturn from '../components/CartReturn/CartReturn';
 import { usePriceFilter } from '../Context/CartTotalContext';
+import EmptyCart from '../components/EmptyCart/EmptyCart';
 const Cart = () => {
     const { setTotalFilter } = usePriceFilter();
     const { cartItems, getTotalCartAmount } = useContext(shopContext);
@@ -26,11 +27,12 @@ const Cart = () => {
 
   return (
     <section className='padding max-container box-border font-montserrat'>
-        <div className="pt-3 mb-4">
-            <h1 className='font-bold text-[2.8rem]'>MY SHOPPING CART</h1>
+        <div className="pt-3 mb-4 mt-16">
+            { totalCartAmount > 0 ? 
+            <h1 className='font-bold text-[2.8rem] max-sm:text-[2rem]'>MY SHOPPING CART</h1>: ""}
         </div>
-        <div className="flex">
-            <div className="w-2/3 pr-6">
+        <div className="flex max-sm:flex-col">
+            <div className="w-2/3 max-sm:w-full lg:pr-6">
         <div className="">
             {listOfMenShoes.map((shoe) => {
                 if (cartItems[shoe.rating] !== 0) {
@@ -57,8 +59,8 @@ const Cart = () => {
             })}
         </div>
         </div>
-        { totalAmount > 0 ?
-        <div className="w-1/3">
+        { totalCartAmount > 0 ?
+        <div className="w-1/3 max-sm:w-full">
         <CartReturn />
         </div> : "" }
         </div>
@@ -66,7 +68,7 @@ const Cart = () => {
         { totalCartAmount > 0 ? 
         <div className="">
 
-        </div> : <h1>YOUR CART IS EMPTY</h1>}
+        </div> : <EmptyCart />}
     </section>
   )
 }

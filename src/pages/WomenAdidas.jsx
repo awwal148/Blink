@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from "react"
+import { womenShopContext } from "../Context/WomenShopContext"
 import iconCart from "../assets/assets/icons/icon-cart.svg"
 import { listOfWomenShoes, gender } from '../constants';
 import { useWomenFilter } from '../components/ContextApi.JSX';
 
-const WomenAdidas = () => {
-  const {  setWomenBrandFilter } = useWomenFilter();
+const WomenAdidas = () => { 
+const { addToWomenCart, womenCartItems  } = useContext(womenShopContext)
+  const { setWomenBrandFilter } = useWomenFilter();
   const currentBrandName = "adidas"
   const nikeShoes = listOfWomenShoes.filter((shoe) => shoe.BrandName.toLowerCase().includes(currentBrandName));
 
@@ -14,6 +16,7 @@ const WomenAdidas = () => {
   return (
     <section className='shoe-grid w-full mt-14 bg-white max-container'>
       {nikeShoes.map((shoe) => {
+      const womenCartItemAmount = womenCartItems[shoe.rating];
       return (
         <div key={shoe.rating} className="shoe-grid-item shoe-flex hover:shadow-lg hover:shadow-white-500/50 box-border mb-2">
         <div className="w-[100%] h-[20rem] hover:h-[20.4rem] bg-slate-400">
@@ -35,7 +38,10 @@ const WomenAdidas = () => {
           </div>
            <div className="flex justify-between align-center px-6 mb-6 max-sm:px-2">
            <p className="text-black tracking-wider text-[20px] mt-3 mb-4 font-semibold max-sm:text-[0.90rem]">£{shoe.Price}.00</p>
-           <img src={iconCart} alt="img" className="w-[1rem] cursor-pointer" />
+           <div>
+            <img src={iconCart} onClick={() => addToWomenCart(shoe.rating)} alt="img" className="w-[1.5rem] cursor-pointer object-center object-fill flex items-center justify-center" />
+           {womenCartItemAmount > 0 && <>{womenCartItemAmount}</>}
+           </div>
            </div>
         </div>
         </div>
@@ -45,4 +51,4 @@ const WomenAdidas = () => {
   );
 };
 
-export default WomenAdidas;
+export default WomenAdidas

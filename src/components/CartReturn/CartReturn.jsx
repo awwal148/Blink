@@ -16,16 +16,16 @@ const CartReturn = () => {
   };
     const navigate = useNavigate()
   return (
-    <section className=" h-full">
+    <section className=" h-full max-sm:mt-4">
             <div className="flex flex-col justify-center items-center shadow-md py-3">
-            <h2 className='text-center font-semibold text-[1.2rem] text-coral-red font-palanquin'>YOU’VE EARNED FREE SHIPPING</h2>
+            <h2 className='text-center font-semibold text-[1.2rem] max-sm:text-[1rem] text-coral-red font-palanquin'>YOU’VE EARNED FREE SHIPPING</h2>
             </div>
             <div className="flex flex-col justify-center items-center shadow-md py-3">
-            <h2 className='text-center font-semibold text-[1rem] text-[#72706e] font-palanquin'>FREE RETURNS ON ALL QUALIFYING ORDERS.</h2>
+            <h2 className='text-center font-semibold text-[1rem] max-sm:text-[0.9rem] text-[#72706e] font-palanquin'>FREE RETURNS ON ALL QUALIFYING ORDERS.</h2>
             </div>
             <div className="">
                 <div className="my-4 py-4 px-3 bg-slate-50 flex justify-between">
-                <h2 className='text-black text-[1.4rem] font-palanquin'>APPLY A PROMO CODE</h2>
+                <h2 className='text-black text-[1.4rem] max-sm:text-[1.2rem] font-palanquin'>APPLY A PROMO CODE</h2>
                 <button
         onClick={handleClick}
         className="transition-transform transform px-6 pl-16 outline-none">
@@ -44,16 +44,16 @@ const CartReturn = () => {
             </div>
             <div className="border-y-2 mt-9">
             <div className="flex justify-between px-4 mt-9 font-montserrat">
-                <h2 className='font-semibold text-lg text-[#72706e]'>SUBTOTAL </h2>
-                <h2 className='font-semibold text-lg text-[#72706e]'>£{totalPrice}.00</h2>
+                <h2 className='font-semibold text-lg max-sm:text-[1rem] text-[#72706e]'>SUBTOTAL </h2>
+                <h2 className='font-semibold text-lg text-[#72706e] max-sm:text-[1rem]'>£{totalPrice}.00</h2>
             </div>
             <div className="flex justify-between px-4 mt-3 font-montserrat mb-6">
-                <h2 className='font-semibold text-lg text-[#72706e]'>SHIPPING COSTS </h2>
-                <h2 className='font-semibold text-lg text-[#72706e]'>£0.00</h2>
+                <h2 className='font-semibold text-lg text-[#72706e] max-sm:text-[1rem]'>SHIPPING COSTS </h2>
+                <h2 className='font-semibold text-lg text-[#72706e] max-sm:text-[1rem]'>£0.00</h2>
             </div>
             </div>
             <div className="flex justify-between px-4 mt-3 py-9 shadow-lg">
-                <h2 className='font-semibold font-palanquin text-[1.5rem]'>TOTAL <span className='font-semibold text-lg text-[#72706e]'>INCL. VAT</span> </h2>
+                <h2 className='font-semibold font-palanquin text-[1.5rem] max-sm:text-[1.4rem]'>TOTAL <span className='font-semibold text-lg text-[#72706e] max-sm:text-[1rem]'>INCL. VAT</span> </h2>
                 <h2 className='font-semibold font-palanquin text-[1.5rem] text-coral-red'>£{totalPrice}.00</h2>
             </div>
             <div className="w-full py-6 text-center bg-coral-red pt-6">
