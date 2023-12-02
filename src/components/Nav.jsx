@@ -5,8 +5,12 @@ import iconAccount  from '../assets/assets/icons/icons8-account-32.png'
 import iconCart  from '../assets/assets/icons/icons8-add-to-cart-24.png'
 import BrandLogo  from '../assets/assets/images/BrandLogo.png';
 import { useState } from 'react';
+import { useItemFilter } from '../Context/ItemsTotalContext';
+import { usePriceFilter } from '../Context/CartTotalContext';
 import { Link } from 'react-router-dom';
 const Nav = () => {
+    const { totalCount } = useItemFilter();
+    const { totalPrice } = usePriceFilter()
     const [ navMenu, SetNavMenu ] = useState(false)
 
     const NavMenuBtn = () => {
@@ -33,14 +37,27 @@ const Nav = () => {
                 ))}
             </ul>
             <div className="flex justify-between gap-6 max-lg:hidden">
+              <div className="">
+                <Link to="/account">
               <img src={iconAccount} alt='img' className='w-[2.5rem] cursor-pointer'/>
-            <Link to="/cart">
-              <img src={iconCart} alt='img' className='w-[2.2rem] cursor-pointer'/>
               </Link>
+              </div>
+              <div className="relative">
+                <Link to="/cart" className="block">
+                  <img src={iconCart} alt="img" className="w-[2.2rem] cursor-pointer" />
+                  {totalPrice > 0 && (
+                    <p className="absolute top-[-1.6rem]  right-[-0.5rem] p-1 px-2 z-10 text-white font-montserrat font-semibold rounded-[50%] bg-black text-sm">
+                      {totalCount}
+                    </p>
+                  )}
+                </Link>
+                </div>
             </div>
             <div className="hidden max-lg:block">
               <div className="flex justify-between gap-4">
+                <Link to="/account">
                <img src={iconAccount} alt='img' className='w-[2.5rem] cursor-pointer'/>
+               </Link>
                <Link to= "/cart">
               <img src={iconCart} alt='img' className='w-[2.2rem] cursor-pointer'/>
               </Link>

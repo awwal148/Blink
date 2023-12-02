@@ -3,7 +3,7 @@ import Button from '../Button';
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 import { usePriceFilter } from '../../Context/CartTotalContext';
 import { useNavigate } from 'react-router-dom';
-
+import TotalCartNumber from '../TotalCartNumber';
 
 const CartReturn = () => {
     const [isRotated, setRotated] = useState(false);
@@ -62,6 +62,7 @@ const CartReturn = () => {
             <div className="flex justify-end pt-4 font-palanquin">
             <button onClick={() => navigate(-1)} className='bg-slate-200 px-7 py-4 outline-none text-[1.3rem]'> continue shopping </button>
             </div>
+            <TotalCartNumber />
         </section> 
   )
 }
