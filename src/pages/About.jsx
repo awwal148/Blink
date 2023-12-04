@@ -43,7 +43,7 @@ const About = () => {
         <div className="lg:flex flex-wrap padding">
         {aboutSec.map((item) => {
           return (
-            <div className="w-1/3 max-lg:w-1/2 max-sm:w-full mx-auto mt-6 lg:mt-9 about-item" key={item.icon}>
+            <div className="w-1/3 max-lg:w-1/2 pl-2 max-sm:w-full mx-auto mt-6 lg:mt-9 about-item" key={item.icon}>
               <img src={item.icon} alt="img"  className="w-[100px] max-sm:w-[80px] mx-[auto] max-sm:my-6"/>
               <h2 className="font-semibold text-center mb-2 lg:mt-2 text-lg ">{item.title}</h2>
               <p className="text-center">{item.text}</p>

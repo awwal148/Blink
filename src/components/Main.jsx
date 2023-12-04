@@ -21,40 +21,44 @@ import WomenJordan from '../pages/WomanJordan'
 import WomenNB from '../pages/WomanNB'
 
 
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Contact from '../pages/Contact';
 import Cart from '../pages/Cart';
 import Account from '../pages/Account';
+import Checkout from '../pages/Checkout';
+import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
-const Main = () => (
-  <main className="relative">
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/men" element={< Men />} > 
-         <Route  path="AllShoes" element={<AllShoes/>}/> 
-         <Route  path="nike" element={<Nike />}/> 
-         <Route  path="Adidas" element={<Adidas />}/> 
-          <Route  path="jordan" element={<Jordan />}/>
-         <Route  path="puma" element={<Puma />}/>
-         <Route  path="balanciaga" element={<Balanciaga />}/>
-         <Route  path="newbalance" element={<NewBalance />}/>
-       </Route>
-      <Route path="/women" element={< Women />} >
-        <Route path="AllShoes" element={<WomenAllShoes />} />
-         <Route  path="nike" element={<WomenNike />}/> 
-         <Route  path="Adidas" element={<WomenAdidas />}/> 
-          <Route  path="jordan" element={<WomenJordan />}/>
-         <Route  path="puma" element={<WomenPuma />}/>
-         <Route  path="balanciaga" element={<WomenBalanciaga />}/>
-         <Route  path="newbalance" element={<WomenNB />}/>
-      </Route>
-      <Route path="/about-us" element={<About />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/account" element={<Account />} />
-      <Route path="*" element={<Notfound />} />
-    </Routes>
-  </main>
-);
+const Main = () => {
+  return (
+    <main className="relative">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/men" element={<Men />}>
+          <Route path="AllShoes" element={<AllShoes />} />
+          <Route path="nike" element={<Nike />} />
+          <Route path="Adidas" element={<Adidas />} />
+          <Route path="jordan" element={<Jordan />} />
+          <Route path="puma" element={<Puma />} />
+          <Route path="balanciaga" element={<Balanciaga />} />
+          <Route path="newbalance" element={<NewBalance />} />
+        </Route>
+        <Route path="/women" element={<Women />}>
+          <Route path="AllShoes" element={<WomenAllShoes />} />
+          <Route path="nike" element={<WomenNike />} />
+          <Route path="Adidas" element={<WomenAdidas />} />
+          <Route path="jordan" element={<WomenJordan />} />
+          <Route path="puma" element={<WomenPuma />} />
+          <Route path="balanciaga" element={<WomenBalanciaga />} />
+          <Route path="newbalance" element={<WomenNB />} />
+        </Route>
+        <Route path="/about-us" element={<About />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
+        <Route path="*" element={<Notfound />} />
+      </Routes>
+    </main>
+  );
+};
 
 export default Main;
- 

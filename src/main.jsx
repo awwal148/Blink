@@ -5,9 +5,11 @@ import './index.css'
 import { TotalPriceProvider } from './Context/CartTotalContext.jsx'
 import { FilterProvider, WomenFilterProvider } from './components/ContextApi.JSX'
 import { ItemTotalProvider } from './Context/ItemsTotalContext.jsx'
+import { AuthProvider } from './Context/AuthContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
     <ItemTotalProvider>
     <TotalPriceProvider>  
     <FilterProvider >
@@ -17,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </FilterProvider>
     </TotalPriceProvider>
     </ItemTotalProvider>
+    </AuthProvider>
   </React.StrictMode>,
   
 )
