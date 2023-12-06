@@ -27,6 +27,7 @@ import Cart from '../pages/Cart';
 import Account from '../pages/Account';
 import Checkout from '../pages/Checkout';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+import DashBoard from '../pages/DashBoard';
 
 const Main = () => {
   return (
@@ -55,6 +56,7 @@ const Main = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/account" element={<Account />} />
         <Route path="/checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
+        <Route path="/dashboard" element={<ProtectedRoute><DashBoard /></ProtectedRoute>} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </main>
