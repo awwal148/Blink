@@ -1,32 +1,44 @@
 import { useAuthFilter } from '../Context/AuthContext';
 import React, { useState } from 'react';
+import {useForm} from 'react-hook-form'
+import { useNavigate } from 'react-router-dom';
 
 function SignUp() {
     const { createUser } = useAuthFilter()
+    const navigate = useNavigate()
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const [registerEmail, setRegisterEmail]  = useState('')
-  const [registerPassword, setRegisterPassword]  = useState('')
+  // const [registerEmail, setRegisterEmail]  = useState('')
+  // const [registerPassword, setRegisterPassword]  = useState('')
+  // const [firstName, setFirstName]  = useState('')
+  // const [lastName, setLastName]  = useState('')
+
   const [error, setError] = useState('')
+  const [userError, setUserError] = useState('')
+
     const [ passwordVisible, setPasswordVisible ] = useState(false)
 
     const showOrHidePassword = () => {
         setPasswordVisible(!passwordVisible)
     }
 
-    const register = async (e) => {
-    e.preventDefault()
-  setError('')
+    const onSubmit = async (data) => {
+    // e.preventDefault()
   try{
-    await createUser(registerEmail, registerPassword)
+    await createUser(data.email, data.password, data.firstName, data.lastName)
+    navigate("/dashboard")
   } catch (e) {
-    setError(e.message)
+   setError(e.message)
+    setInterval(() => {
+      setError("")
+    }, 8000);
     console.log(e.message)
   }
   }
 
   return (
     <div className=''>
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-4">
           <label htmlFor="firstName" className="block text-lg font-palanquin font-bold text-black mb-3">
             FIRST NAME:
@@ -35,7 +47,9 @@ function SignUp() {
             type="text"
             id="firstName"
             name="firstName"
+            {...register('firstName', { required: 'FirstName is required' })}
             className="mt-1 p-2 border rounded-md w-full py-5"
+          //  onChange={(event) => setFirstName(event.target.value)}
             required
           />
         </div>
@@ -47,6 +61,8 @@ function SignUp() {
             type="text"
             id="lastName"
             name="lastName"
+            {...register('lastName', { required: 'LastName is required' })}
+            // onChange={(event) => setLastName(event.target.value)}
             className="mt-1 p-2 border rounded-md w-full py-5"
             required
           />
@@ -59,7 +75,8 @@ function SignUp() {
             type="email"
             id="email"
             name="email"
-            onChange={(event) => setRegisterEmail(event.target.value)}
+            {...register('email', { required: 'Email is required' })}
+            // onChange={(event) => setRegisterEmail(event.target.value)}
             className="mt-1 p-2 border rounded-md w-full py-5"
             required
           />
@@ -73,17 +90,22 @@ function SignUp() {
             type={passwordVisible ? "text" : "password"}
             id="password"
             name="password"
-            onChange={(event) => setRegisterPassword(event.target.value)}
+            {...register('password', { required: 'Password is required' })}
+            // onChange={(event) => setRegisterPassword(event.target.value)}
             className="mt-1 p-2 w-full outline-none py-5"
             required
           />
           <button type='button' className='p-2 focus:outline-none' onClick={showOrHidePassword}>{passwordVisible ? "Hide" : "Show"}</button>
           </div>
         </div>
-        <button type="submit" onClick={register} className="bg-coral-red hover:bg-red-500 font-montserrat font-semibold text-white text-[1.5rem] p-2 rounded-md w-full py-5 text-center">
+        <button type="submit" className="bg-coral-red hover:bg-red-500 font-montserrat font-semibold text-white text-[1.5rem] p-2 rounded-md w-full py-5 text-center">
           SIGN UP
-        </button>{error}
+        </button>
+        {error && <p className="text-red-500">{error}</p>}
       </form>
+      {userError && <p className="text-red-500">{userError}</p>}
+      {error}
+      {userError}
     </div>
   );
 }

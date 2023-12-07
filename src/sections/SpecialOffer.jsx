@@ -21,10 +21,12 @@ const SpecialOffer = () => {
           <a href="/men/nike">
         <Button label="Shop now" iconURL={arrowRight} />
         </a>
+        <a href="about-us">
         <Button
         label="Learn more"
         backgroundColor="bg-white"
         borderColor="text-slate-gray" />
+        </a>
         </div>
       </div>
     </section>

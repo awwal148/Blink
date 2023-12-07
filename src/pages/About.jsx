@@ -13,7 +13,7 @@ const About = () => {
     <section className="">
       <div className="padding">
       <div className="bg-black max-container">
-      <div className="flex justify-between lg:px-16 lg:flex-1 shoe-about mt-9 max-sm:mt-[3.8rem] gap-6 lg:gap-12 text-white lg:h-[25rem] py-5">
+      <div className="flex justify-between lg:px-16 lg:flex-1 shoe-about mt-11 max-sm:mt-[3.8rem] gap-6 lg:gap-12 text-white lg:h-[25rem] py-5">
         <div className="w-1/2 sm:w-[100%] max-sm:w-[100%] sm:pl-3 max-sm:pl-3 max-sm:pr-2 sm:pb-5">
         <h1 className="text-4xl max-sm:font-[28px] font-semibold pb-4 lg:pb-8">The Current Culture Marketplace</h1>
         <p>

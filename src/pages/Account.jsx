@@ -6,20 +6,10 @@ import Tabs from '../AcountTab/Tab'
 
 
 const Account = () => {
-  const { user } = useAuthFilter()
-
-  const logOut = async () => {
-    await signOut(auth)
-  }
-
   return (
-    <section className='padding max-container pt-11'>
-        <h1 className='font-bold text-[3rem]'>My account </h1>
-      <div className="w-[45%] mx-auto">
-        
-        <h4>user signed in: {user?.email}</h4>
-        <button onClick={logOut}>log out </button>
-
+    <section className='padding max-container'>
+        <h1 className='font-bold text-[3rem] mt-14'>My account </h1>
+      <div className="w-[45%] mx-auto max-sm:w-full">
         <Tabs />
         </div>
     </section>

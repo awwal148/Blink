@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Button from '../Button';
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 import { usePriceFilter } from '../../Context/CartTotalContext';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import TotalCartNumber from '../TotalCartNumber';
 
 const CartReturn = () => {
@@ -56,9 +56,11 @@ const CartReturn = () => {
                 <h2 className='font-semibold font-palanquin text-[1.5rem] max-sm:text-[1.4rem]'>TOTAL <span className='font-semibold text-lg text-[#72706e] max-sm:text-[1rem]'>INCL. VAT</span> </h2>
                 <h2 className='font-semibold font-palanquin text-[1.5rem] text-coral-red'>£{totalPrice}.00</h2>
             </div>
-            <div className="w-full py-6 text-center bg-coral-red pt-6">
+            <Link to="/checkout">
+            <div className="w-full py-6 text-center bg-coral-red pt-6 cursor-pointer">
             <p className='font-bold text-[1.4rem] font-palanquin'> CHECKOUT </p>
             </div>
+            </Link>
             <div className="flex justify-end pt-4 font-palanquin">
             <button onClick={() => navigate(-1)} className='bg-slate-200 px-7 py-4 outline-none text-[1.3rem]'> continue shopping </button>
             </div>

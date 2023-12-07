@@ -1,16 +1,34 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth'
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile, onAuthStateChanged } from 'firebase/auth'
 //  import { getFirestore } from 'firebase/firestore';
-import { auth, db } from "../firebase-config";
+import { auth } from "../firebase-config";
+import db from "../firebase-config";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState({})
 
-  const createUser = (email, password,) => {
-    return createUserWithEmailAndPassword(auth, email, password)
-  }
+  const createUser = async (email, password, firstName, lastName) => {
+    try {
+    const { user } = await createUserWithEmailAndPassword(auth, email, password)
+    // Update user profile with first name and last name
+      await updateProfile(user, {
+        displayName: `${firstName} ${lastName}`,
+      });
+
+
+    // Store additional user information in Firestore
+      await db.collection('users').doc(user.uid).set({
+        firstName,
+        lastName,
+        email,
+      });
+
+  } catch (error) {
+      console.error('Error signing up:', error.message);
+    }
+}
 
   useEffect(() => {
   const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
