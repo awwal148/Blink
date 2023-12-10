@@ -1,20 +1,25 @@
 import { useAuthFilter } from '../Context/AuthContext';
 import React, { useState } from 'react';
 import {useForm} from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup';
+// import { useForm, useFieldArray, yupResolver } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import * as Yup from 'yup';
 
 function SignUp() {
-    const { createUser } = useAuthFilter()
-    const navigate = useNavigate()
-  const { register, handleSubmit, formState: { errors } } = useForm();
+    const { createUser } = useAuthFilter();
+    const navigate = useNavigate();
 
-  // const [registerEmail, setRegisterEmail]  = useState('')
-  // const [registerPassword, setRegisterPassword]  = useState('')
-  // const [firstName, setFirstName]  = useState('')
-  // const [lastName, setLastName]  = useState('')
+    const validationSchema = Yup.object().shape({
+  firstName: Yup.string().required('First Name is required'),
+  lastName: Yup.string().required('Last Name is required'),
+  email: Yup.string().email('Invalid email').required('Email is required'),
+  password: Yup.string().min(8).required('Password must contain a minimum of 8 characters '),
+});
+  const { register, handleSubmit, formState: { errors }, reset, clearErrors } = useForm({resolver: yupResolver(validationSchema)});
 
   const [error, setError] = useState('')
-  const [userError, setUserError] = useState('')
+
 
     const [ passwordVisible, setPasswordVisible ] = useState(false)
 
@@ -29,9 +34,11 @@ function SignUp() {
     navigate("/dashboard")
   } catch (e) {
    setError(e.message)
-    setInterval(() => {
-      setError("")
-    }, 8000);
+  setTimeout(() => {
+        setError('');
+        reset()
+        clearErrors(); // Clear form errors
+      }, 5000);
     console.log(e.message)
   }
   }
@@ -52,6 +59,7 @@ function SignUp() {
           //  onChange={(event) => setFirstName(event.target.value)}
             required
           />
+          <p>{errors.firstName?.message}</p>
         </div>
         <div className="mb-4">
           <label htmlFor="lastName" className="block text-lg font-palanquin font-bold text-black mb-3">
@@ -97,15 +105,14 @@ function SignUp() {
           />
           <button type='button' className='p-2 focus:outline-none' onClick={showOrHidePassword}>{passwordVisible ? "Hide" : "Show"}</button>
           </div>
+          <p className='text-coral-red pt-2'>{errors.password?.message}</p>
         </div>
         <button type="submit" className="bg-coral-red hover:bg-red-500 font-montserrat font-semibold text-white text-[1.5rem] p-2 rounded-md w-full py-5 text-center">
           SIGN UP
         </button>
-        {error && <p className="text-red-500">{error}</p>}
+        {error && <p className="text-red-500 font-palanquin font-semibold">{error}</p>}
       </form>
-      {userError && <p className="text-red-500">{userError}</p>}
       {error}
-      {userError}
     </div>
   );
 }
