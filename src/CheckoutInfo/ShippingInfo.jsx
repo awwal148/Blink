@@ -14,14 +14,14 @@ const ShippingInfo = ({onSubmit}) => {
   country: Yup.string().required('Input country name'),
   city: Yup.string().required('City is required'),
   email: Yup.string().email('Invalid email').required('Email is required'),
-  phone: Yup.string().required('Phone Number is required').matches(/^\d{10}$/, 'Invalid phone number'),
+  phone: Yup.string().required('Phone Number is required').matches(/^\d{11}$/, 'Invalid phone number'),
 });
   const { register, handleSubmit, formState: { errors } } = useForm({resolver: yupResolver(validationSchema)});
 
   return (
     <div className=''>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="flex gap-4">
+        <div className="flex max-sm:flex-col gap-4 max-sm:gap-0">
         <div className="mb-4 w-full">
           <label htmlFor="firstName" className="block text-lg font-palanquin font-bold text-black mb-3">
             FIRST NAME:
@@ -69,10 +69,10 @@ const ShippingInfo = ({onSubmit}) => {
             required
           />
         </div>
-        <div className="flex gap-4">
+        <div className="flex max-sm:flex-col gap-4 max-sm:gap-0">
         <div className="mb-4 w-full">
           <label htmlFor="postCode" className="block text-lg font-bold font-palanquin text-black mb-3">
-            PostCode :
+            Post Code :
           </label>
           <input
             type="text"
@@ -114,7 +114,7 @@ const ShippingInfo = ({onSubmit}) => {
           />
         </div>
           <p className='mt-9 mb-6 text-[1.5rem] text-[#333232]'>Enter Contact Info</p>
-          <div className="flex gap-4">
+          <div className="flex max-sm:flex-col gap-4 max-sm:gap-0">
         <div className="mb-4 w-full">
           <label htmlFor="email" className="block text-lg font-bold font-palanquin text-black mb-3">
             Email :
@@ -143,7 +143,7 @@ const ShippingInfo = ({onSubmit}) => {
             {...register('phone', {
                   required: 'Phone Number is required',
                   pattern: {
-                    value: /^\d{10}$/,
+                    value: /^\d{11}$/,
                     message: 'Invalid phone number',
                   },
                 })}
@@ -160,7 +160,7 @@ const ShippingInfo = ({onSubmit}) => {
             <input type='checkbox' className='w-8 h-8'/>
             <p className='text-lg text-[#333232]'>Add me to BLINK mailing list</p>
         </div>
-        <button type="submit" className="bg-coral-red hover:bg-red-500 font-montserrat font-semibold text-white text-[1.5rem] p-2 w-1/2 py-5 text-center">
+        <button type="submit" className="bg-coral-red hover:bg-red-500 font-montserrat font-semibold text-white text-[1.5rem] p-2 w-1/2 max-sm:w-full py-5 text-center">
           CONTINUE TO PAYMENT
         </button>
       </form>

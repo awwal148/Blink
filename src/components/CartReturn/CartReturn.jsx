@@ -24,8 +24,8 @@ const CartReturn = () => {
             <h2 className='text-center font-semibold text-[1rem] max-sm:text-[0.9rem] text-[#72706e] font-palanquin'>FREE RETURNS ON ALL QUALIFYING ORDERS.</h2>
             </div>
             <div className="">
-                <div className="my-4 py-4 px-3 bg-slate-50 flex justify-between">
-                <h2 className='text-black text-[1.4rem] max-sm:text-[1.2rem] font-palanquin'>APPLY A PROMO CODE</h2>
+                <div className="my-4 py-4 px-3 bg-[#e2e2e2] flex justify-between">
+                <h2 className='text-[#121212] text-[1.4rem] max-sm:text-[1.2rem] font-palanquin'>APPLY A PROMO CODE</h2>
                 <button
         onClick={handleClick}
         className="transition-transform transform px-6 pl-16 outline-none">

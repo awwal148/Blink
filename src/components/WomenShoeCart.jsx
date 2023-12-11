@@ -5,6 +5,7 @@ import { womenShopContext } from '../Context/WomenShopContext';
 
 const WomenShoeCart = (props) => {
     const { rating,  BrandName, Price, imgURL, Color } = props.data;
+    const {checkCart} = props;
     const { womenCartItems, addToWomenCart, removeFromWomenCart, updateWomenCartItemCount } = useContext(womenShopContext);
 
     const womenCartCount = (e) => {
@@ -13,18 +14,18 @@ const WomenShoeCart = (props) => {
     
 
   return (
-    <section className=" w-[100%] h-[17rem] gap-3 max-sm:gap-0 lg:pb-4">
-        <div className="h-full p-[1rem] flex max-sm:flex-col justify-between shadow-lg">
+    <section className={`w-[100%] h-[17rem] gap-3 max-sm:gap-0 lg:pb-4 ${checkCart ? 'gap-0 h-full' : ""}`}>
+        <div className={`h-full p-[1rem] flex max-sm:flex-col ${checkCart ? 'flex flex-col' : ""} justify-between shadow-lg`}>
         <div className="flex gap-4">
-            <div className="h-[full] w-[15rem] max-sm:w-[9rem]">
+            <div className={`h-[full] w-[15rem] max-sm:w-[9rem] ${checkCart ? 'w-[9rem]' : ""}`}>
         <img src={imgURL} alt='img' />
           </div>
         <div className="">
-            <p className='font-semibold text-[1.5rem] pb-2 max-sm:text-[1rem]'> {BrandName} </p>
+            <p className={`font-semibold text-[1.5rem] pb-2 max-sm:text-[1rem] ${checkCart ? 'text-[1rem]' : ""}`}> {BrandName} </p>
             {gender.map((index) => (
-                <p key={index.women} className='text-[1.4rem] text-coral-red max-sm:text-[1rem] font-semibold'>{index.women}</p>
+                <p key={index.women} className={`text-[1.4rem] max-sm:text-[1rem] text-coral-red font-semibold ${checkCart ? 'text-[1rem]' : ""}`}>{index.women}</p>
             ))}
-            <p className='text-[1.4em] text-coral-red font-semibold pb-6 max-sm:text-[1rem]'>{Color} Color</p>
+            <p className={`text-[1.4em] text-coral-red font-semibold pb-6 max-sm:text-[1rem] ${checkCart ? 'text-[1rem]' : ""}`}>{Color} Color</p>
             {/* <input value={cartItems[rating]} onChange={(e) => updateCartItemCount(Number(e.target.value), rating)}/> */}
             <div className="flex w-[8rem] justify-between">
             <button onClick={() => removeFromWomenCart(rating)} className='rounded-[50%] p-3 shadow-inner bg-[#e9e6e3] '> - </button>
@@ -33,8 +34,8 @@ const WomenShoeCart = (props) => {
             </div>
             </div>
         </div>
-        <div className="flex flex-col justify-normal items-end max-sm:items-center">
-            <p className='font-semibold text-[1.5rem] max-sm:text-[1.11rem]'>£{Price * womenCartItems[rating]}</p>
+        <div className={`flex flex-col justify-normal items-end max-sm:items-center ${checkCart ? 'max-sm:items-center lg:items-center' : ""}`}>
+            <p className={`font-semibold text-[1.5rem] max-sm:text-[1.1rem]${checkCart ? 'text-[1.1rem]' : ""}`}>£{Price * womenCartItems[rating]}</p>
             </div>
         </div>
     </section>
