@@ -107,7 +107,7 @@ function Checkout() {
       </div>
       )}
       </div>
-      <div className="w-1/3 max-lg:w-full sm:w-full">
+        <div className="w-1/3 max-lg:w-full sm:w-full">
          <div className="bg-[#e2e2e2] h-16 pl-6 flex justify-between items-center mt-9">
               <p className='list-decimal font-montserrat text-[1.4rem]  max-sm:text-[1.2rem] text-[#3b3b3b]'>ORDER DETAILS</p>
               <button
@@ -140,7 +140,7 @@ function Checkout() {
                         </div>
                     ) 
                 }
-                return null; 
+                return null;
             })}
         </div>
         </div> : ""}

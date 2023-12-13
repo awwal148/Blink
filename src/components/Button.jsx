@@ -6,7 +6,7 @@ const Button = ( { label, iconURL, backgroundColor, textColor, borderColor, full
     
     ${backgroundColor ? `${backgroundColor} ${textColor} ${borderColor}` 
     : 'bg-coral-red text-white border-coral-red'} rounded-full ${fullWidth && 'w-full '} 
-     ${bg ? 'bg-slate-50 text-[#000]' : ''} ${iconURL ? ' rounded-none' : ''} ${couponBtn ? ' rounded-none' : ''} ${about ? ' rounded-none flex justify-between border-none' : ''}`}>
+     ${bg ? 'bg-white-400 text-[#121212]' : ''} ${iconURL ? ' rounded-none' : ''} ${couponBtn ? ' rounded-none' : ''} ${about ? ' rounded-none flex justify-between border-none' : ''}`}>
         {label}
         {icon}
         {iconURL && <img 

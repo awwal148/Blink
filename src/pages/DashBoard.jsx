@@ -16,11 +16,11 @@ const DashBoard = () => {
 
   return (
     <section className='max-container padding w-full '>
-        <div className="mt-16">
+        <div className="mt-16 max-sm:mt-[4.4rem]">
         <div className="flex gap-4 mt-4">
         <Link to="/">
         <h3 className='font-bold font-palanquin text-[1.4rem]'>Home</h3>
-        </Link>
+        </Link> 
         <li className='text-[#3b3b3b] font-palanquin text-[1.2rem]'>My Account</li>
         </div>
         <div className="">
