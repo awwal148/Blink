@@ -121,10 +121,10 @@ const Nav = () => {
     </div>
   ))}
   <Link to="/dashboard">
-  <p className='font-montserrat leading-normal text-lg text-slate-gray' onClick={NavMenuBtn}>My Account</p>
+  <p className='font-montserrat leading-normal text-lg text-slate-gray mt-3' onClick={NavMenuBtn}>My Account</p>
   </Link>
   <Link to="/account">
-  <p className='font-montserrat leading-normal text-lg text-slate-gray mt-3' onClick={NavMenuBtn}>Login/SignUp</p>
+  <p className='font-montserrat leading-normal text-lg text-slate-gray mt-5' onClick={NavMenuBtn}>Login/SignUp</p>
   </Link>
 </ul>
         </div>}

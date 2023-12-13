@@ -20,18 +20,14 @@ const Cart = () => {
     setTotalFilter(totalCartAmount);
   }, [totalCartAmount]);
 
-//     console.log('totalAmount:', totalAmount);
-//   console.log('womenTotalAmount:', womenTotalAmount);
-//   console.log('allTotalAmount:', totalCartAmount);
-
   return (
     <section className='padding max-container box-border font-montserrat'>
         <div className="pt-3 mb-4 mt-16">
             { totalCartAmount > 0 ? 
-            <h1 className='font-bold text-[2.8rem] max-sm:text-[2rem]'>MY SHOPPING CART</h1>: ""}
+            <h1 className='font-bold text-[2.8rem] max-sm:text-[2rem] max-lg:text-[2rem]'>MY SHOPPING CART</h1>: ""}
         </div>
-        <div className="flex max-sm:flex-col">
-            <div className="w-2/3 max-sm:w-full lg:pr-6">
+        <div className="flex max-sm:flex-col max-lg:flex-col">
+            <div className="w-2/3 max-sm:w-full lg:pr-6 max-lg:w-full">
         <div className="">
             {listOfMenShoes.map((shoe) => {
                 if (cartItems[shoe.rating] !== 0) {
@@ -59,7 +55,7 @@ const Cart = () => {
         </div>
         </div>
         { totalCartAmount > 0 ?
-        <div className="w-1/3 max-sm:w-full">
+        <div className="w-1/3 max-sm:w-full max-lg:w-full">
         <CartReturn />
         </div> : "" }
         </div>

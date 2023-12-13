@@ -18,7 +18,7 @@ export const FilterProvider = ({ children }) => {
 };
 
 export const useFilter = () => {
-  return useContext(FilterContext);
+  return useContext(FilterContext); 
 };
 
 //women

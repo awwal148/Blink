@@ -29,8 +29,8 @@ const DashBoard = () => {
         <p onClick={logOut} className='text-[1rem] font-semibold border-b-2 border-coral-red font-montserrat cursor-pointer my-8 inline-block'>LOGOUT</p>
         </div>
         </div>
-        <div className="w-full flex max-sm:flex-col gap-12">
-        <div className="w-1/2 max-sm:w-full">
+        <div className="w-full flex max-sm:flex-col max-lg:flex-col gap-12">
+        <div className="w-1/2 max-sm:w-full max-lg:w-full">
         <div className=" w-full mt-14">
           <div className='flex justify-between border-slate-300 border-b-2'>
             <div className="flex gap-3 mb-6">
@@ -42,7 +42,7 @@ const DashBoard = () => {
       <p className='font-palanquin text-[1.4rem] font-semibold text-[#353434]'>Profile</p>
         </div>
         <div className="">
-          <p className='border-b-[3px] font-montserrat text-lg font-bold border-slate-500 cursor-pointer text-[#353434]'>EDIT PROFILE</p>
+          <p className='border-b-[3px] font-montserrat text-[1rem] font-bold border-slate-500 cursor-pointer text-[#353434]'>EDIT PROFILE</p>
         </div>
         </div>
         </div>
@@ -59,7 +59,7 @@ const DashBoard = () => {
       <p className='font-palanquin text-[1.4rem] font-semibold text-[#353434]'>Password</p>
         </div>
         <div className="">
-          <p className='border-b-[3px] font-montserrat text-lg font-bold border-slate-500 cursor-pointer text-[#353434]'>EDIT PASSWORD</p>
+          <p className='border-b-[3px] font-montserrat text-[1rem] font-bold border-slate-500 cursor-pointer text-[#353434]'>EDIT PASSWORD</p>
         </div>
         </div>
         </div>
@@ -78,7 +78,7 @@ const DashBoard = () => {
          </div>
          </div>
          </div>
-         <div className="w-1/2 max-sm:w-full mt-14">
+         <div className="w-1/2 max-sm:w-full max-lg:w-full mt-14">
           <div className='flex justify-between border-slate-300 border-b-2'>
             <div className="flex gap-3 mb-6">
               <div className="flex items-center justify-center w-11">
