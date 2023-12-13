@@ -4,9 +4,15 @@ import { getFirestore } from 'firebase/firestore';
 import { getAnalytics } from "firebase/analytics";
 import {getAuth} from 'firebase/auth'
 
+// if (typeof process !== 'undefined') {
+//   console.log(process.env.NODE_ENV);
+// } else {
+//   console.log("Environment variable not available.");
+// }
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyA8M9Cr2DKh_dqRL3VZdxW_VpVsEmXVFMw",
+  apiKey: import.meta.env.VITE_BLINK_FIREBASE_KEY,
+  // AIzaSyA8M9Cr2DKh_dqRL3VZdxW_VpVsEmXVFMw
   authDomain: "blink-authentication.firebaseapp.com",
   projectId: "blink-authentication",
   storageBucket: "blink-authentication.appspot.com",

@@ -1,16 +1,35 @@
 // CardDetailsForm.js
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useContext } from 'react';
+import { shopContext } from '../Context/ShopContext';
+import { womenShopContext } from '../Context/WomenShopContext';
 
 const CardDetailsForm = ({ onSubmitCardDetails }) => {
+   const { clearCart } = useContext(shopContext);
+  const { clearWomenCart } = useContext(womenShopContext);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  // Function to clear both men's and women's carts
+  const handleClearCart = () => {
+    // Clear men's cart
+    clearCart();
+    // Clear women's cart
+    clearWomenCart();
+  };
+
   return (
-    <form onSubmit={handleSubmit(onSubmitCardDetails)} className="flex flex-col gap-4">
+    <form  onSubmit={handleSubmit((data) => {
+        // First, handle the card details submission
+        onSubmitCardDetails(data);
+        // Then, clear the carts
+        handleClearCart();
+      })} className="flex flex-col gap-4">
       {/* Card Details Section */}
       <div className="flex flex-col">
         <h3 className="text-[1.3rem] font-semibold my-2">Credit Details</h3>
@@ -21,6 +40,7 @@ const CardDetailsForm = ({ onSubmitCardDetails }) => {
           <input
             type="text"
             id="cardName"
+            required
             {...register('cardName')}
             className={`mt-1 p-2 border rounded-md w-full py-5 ${
               errors.cardNumber ? 'border-red-500' : ''

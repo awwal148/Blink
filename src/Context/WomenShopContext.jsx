@@ -27,6 +27,10 @@ export const ShopWomenContextProvider = (props) => {
     return getWomenDefaultCart();
   });
 
+  const clearWomenCart = () => {
+    setWomenCartItems(getWomenDefaultCart());
+  };
+
   // useEffect to store cartItems in local storage whenever it changes
   useEffect(() => {
     localStorage.setItem('womenCart', JSON.stringify(womenCartItems));
@@ -71,6 +75,7 @@ export const ShopWomenContextProvider = (props) => {
     removeFromWomenCart,
     updateWomenCartItemCount,
     getWomenTotalCartAmount,
+    clearWomenCart,
   };
 
   return <womenShopContext.Provider value={contextValue}>{props.children}</womenShopContext.Provider>;

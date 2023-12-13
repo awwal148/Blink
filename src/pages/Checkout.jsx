@@ -59,11 +59,11 @@ function Checkout() {
         <Link to="/cart">
         <p className='font-semibold max-sm:font-bold text-[1.2rem] max-sm:text-[0.7rem] font-palanquin border-black border-b-[3px] px-2 max-sm:px-1 cursor-pointer'>CART</p>
         </Link>
-        <p onClick={CardDetails} className='font-semibold max-sm:font-bold text-[1.2rem] font-palanquin border-black border-b-[3px] px-2 max-sm:text-[0.7rem]'>SHIPPING</p>
+        <p className='font-semibold max-sm:font-bold text-[1.2rem] font-palanquin border-black border-b-[3px] px-2 max-sm:text-[0.7rem]'>SHIPPING</p>
         <p className={`font-semibold max-sm:font-bold text-[1.2rem] font-palanquin border-black border-b-[3px] px-2 max-sm:text-[0.7rem] ${!showCardDetails ? 'text-[#a3a2a2] border-[#a3a2a2]': 'border-black text-[#141414] cursor-pointer'}`}>PAYMENT</p>
       <p className={`font-semibold max-sm:font-bold text-[1.2rem] font-palanquin border-black border-b-[3px] px-2 max-sm:text-[0.7rem] ${!orderComplete || !showCardDetails ? 'text-[#a3a2a2] border-[#a3a2a2]': 'border-black text-[#141414]'}`}>ORDER COMPLETE</p>
       </div>
-      <div className="w-full flex max-sm:flex-col-reverse sm:flex-col-reverse gap-6">
+      <div className="w-full flex max-sm:flex-col-reverse max-lg:flex-col-reverse gap-6">
         <div className="w-2/3 max-sm:w-full sm:w-full">
           
       {!showCardDetails ? (
@@ -107,7 +107,7 @@ function Checkout() {
       </div>
       )}
       </div>
-      <div className="w-1/3 max-sm:w-full sm:w-full">
+      <div className="w-1/3 max-lg:w-full sm:w-full">
          <div className="bg-[#e2e2e2] h-16 pl-6 flex justify-between items-center mt-9">
               <p className='list-decimal font-montserrat text-[1.4rem]  max-sm:text-[1.2rem] text-[#3b3b3b]'>ORDER DETAILS</p>
               <button

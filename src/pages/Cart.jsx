@@ -20,7 +20,6 @@ const Cart = () => {
     setTotalFilter(totalCartAmount);
   }, [totalCartAmount]);
 
-
 //     console.log('totalAmount:', totalAmount);
 //   console.log('womenTotalAmount:', womenTotalAmount);
 //   console.log('allTotalAmount:', totalCartAmount);

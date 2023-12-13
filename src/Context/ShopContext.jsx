@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { createContext } from 'react';
 import { listOfMenShoes } from '../constants';
+import { useItemFilter } from './ItemsTotalContext';
 
 export const shopContext = createContext(null);
 
@@ -26,6 +27,12 @@ export const ShopContextProvider = (props) => {
     }
     return getDefaultCart();
   });
+
+  const { setItemFilter } = useItemFilter();
+
+  const clearCart = () => {
+    setCartItems(getDefaultCart());
+  };
 
   // useEffect to store cartItems in local storage whenever it changes
   useEffect(() => {
@@ -69,6 +76,7 @@ export const ShopContextProvider = (props) => {
     removeFromCart,
     updateCartItemCount,
     getTotalCartAmount,
+    clearCart,
   };
 
   return <shopContext.Provider value={contextValue}>{props.children}</shopContext.Provider>;
