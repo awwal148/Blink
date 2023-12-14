@@ -21,10 +21,10 @@ const Hero = () => {
         </h1>
         <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">Discover stylish Blink arrivals, quality comfort, and innovation for your active life, with products from your favorite Brands.</p>
         <div className="flex gap-3 max-sm:flex-col-reverse">  
-        <Link to="/women">
+        <Link onClick={() => {window.scrollTo(0, 0)}} to="/women">
                     <Button  label="WOMEN SHOES" iconURL={arrowRight}/>
              </Link>
-        <Link to="/men">
+        <Link onClick={() => {window.scrollTo(0, 0)}} to="/men">
                     <Button  label="MEN SHOES" iconURL={arrowRight}/>
              </Link>
              </div>
