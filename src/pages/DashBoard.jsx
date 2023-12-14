@@ -3,7 +3,7 @@ import { auth } from '../firebase-config'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { IconContext } from 'react-icons';
-import { FaUserCircle, FaLock, FaCircle, FaBookMedical, FaBookReader, FaBook } from 'react-icons/fa';
+import { FaUserCircle, FaLock, FaCircle, FaBook } from 'react-icons/fa';
 import { useAuthFilter } from '../Context/AuthContext';
 
 const DashBoard = () => {

@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile, onAuthStateChanged } from 'firebase/auth'
-//  import { getFirestore } from 'firebase/firestore';
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged } from 'firebase/auth'
 import { auth } from "../firebase-config";
 import db from "../firebase-config";
 
@@ -26,13 +25,13 @@ export const AuthProvider = ({ children }) => {
       });
 
   } catch (error) {
-      console.error('Error signing up:', error.message);
+      // console.error('Error signing up:', error.message);
     }
 }
 
   useEffect(() => {
   const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-    console.log(currentUser)
+    // console.log(currentUser)
     setUser(currentUser);
   });
  

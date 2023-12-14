@@ -9,11 +9,14 @@ import { useItemFilter } from '../Context/ItemsTotalContext';
 import { usePriceFilter } from '../Context/CartTotalContext';
 import { Link } from 'react-router-dom';
 import { GB } from 'country-flag-icons/react/3x2';
+import { useAuthFilter } from '../Context/AuthContext';
 const Nav = () => {
     const { totalCount } = useItemFilter();
-    const { totalPrice } = usePriceFilter()
-    const [ navMenu, SetNavMenu ] = useState(false)
-    const[accIcon, setAccIcon] = useState(false)
+    const { totalPrice } = usePriceFilter();
+    const [ navMenu, SetNavMenu ] = useState(false);
+    const[accIcon, setAccIcon] = useState(false);
+
+    const { user } = useAuthFilter();
 
     const accountBtn = () => {
       setAccIcon(!accIcon)
@@ -87,13 +90,13 @@ const Nav = () => {
       </Link>
         </div>
         </div>
-        <div className='flex justify-between border-slate-300 border-b-2 mt-4'>
+        { !user && <div className='flex justify-between border-slate-300 border-b-2 mt-4'>
             <div className="flex gap-3 mb-6">
               <Link to="/account">
       <p className='font-palanquin text-[1.3rem] text-[#353434]' onClick={accountBtn}>Login/SignUp</p>
       </Link>
         </div>
-        </div>
+        </div>}
 
          <div className='flex justify-between border-slate-300 border-b-2 mt-4'>
             <div className="flex gap-3 mb-2 justify-center items-center">

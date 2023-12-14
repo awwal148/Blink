@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuthFilter } from '../Context/AuthContext';
 import { useForm } from 'react-hook-form';
@@ -15,7 +15,6 @@ function Login() {
       await signIn(data.email, data.password);
       navigate('/dashboard');
     } catch (e) {
-      console.log(e.message);
       setError(e.message)
       setTimeout(() => {
        setError("");

@@ -1,8 +1,7 @@
 import { useAuthFilter } from '../Context/AuthContext';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {useForm} from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup';
-// import { useForm, useFieldArray, yupResolver } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 
@@ -39,7 +38,6 @@ function SignUp() {
         reset()
         clearErrors(); // Clear form errors
       }, 5000);
-    console.log(e.message)
   }
   }
 
