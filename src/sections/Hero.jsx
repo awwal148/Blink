@@ -4,6 +4,7 @@ import { bigShoe1 } from "../assets/assets/images"
 import Button from "../components/Button"
 import ShoeCard from "../components/ShoeCard"
 import { shoes, statistics } from "../constants"
+import { Link } from "react-router-dom"
 const Hero = () => {
   const [bigShoeImg, setBigShoeImg ] = useState(bigShoe1)
   return (
@@ -20,12 +21,12 @@ const Hero = () => {
         </h1>
         <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">Discover stylish Blink arrivals, quality comfort, and innovation for your active life, with products from your favorite Brands.</p>
         <div className="flex gap-3 max-sm:flex-col-reverse">  
-        <a href="/women">
+        <Link to="/women">
                     <Button  label="WOMEN SHOES" iconURL={arrowRight}/>
-             </a>
-        <a href="/men">
+             </Link>
+        <Link to="/men">
                     <Button  label="MEN SHOES" iconURL={arrowRight}/>
-             </a>
+             </Link>
              </div>
 
         <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
