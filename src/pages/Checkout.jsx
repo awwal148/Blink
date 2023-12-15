@@ -36,20 +36,19 @@ function Checkout() {
   const [shippingInfo, setShippingInfo] = useState({});
 
 
-  const CardDetails = () => {
-    setShowCardDetails(false);
-  }
     const onSubmit = (data) => {
     // e.preventDefault()
   console.log('Shipping Info Submitted:', data);
     setShowCardDetails(true);
     setShippingInfo(data)
+    window.scrollTo(0, 0)
   }
 
    const onSubmitCardDetails = (data) => {
     // e.preventDefault()
   console.log('Shipping Info Submitted:', data);
   setOrderComplete(true)
+  window.scrollTo(0, 0)
   }
 
   return (
@@ -91,7 +90,7 @@ function Checkout() {
             <p className='font-montserrat text-[1.3rem] text-[#3b3b3b] pr-4'>EDIT</p>
             </a>
           </div>
-          <div className=" flex gap-3 w-full h-full border-2 border-slate-300 mt-4 p-4 shadow-md">
+          <div className=" flex gap-3 w-full h-full border-2 border-slate-300 mt-4 p-4 shadow-md flex-wrap">
             <p>{shippingInfo.firstName}</p>
             <p>{shippingInfo.lastName}</p>
             <p>{shippingInfo.streetAddress}</p>

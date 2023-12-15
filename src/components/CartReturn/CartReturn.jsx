@@ -14,6 +14,11 @@ const CartReturn = () => {
     const handleClick = () => {
     setRotated(!isRotated);
   };
+
+  const contiuneShoping = () => {
+    navigate(-1)
+    window.scrollTo(0, 0)
+  }
     const navigate = useNavigate()
   return (
     <section className=" h-full max-sm:mt-4">
@@ -57,12 +62,12 @@ const CartReturn = () => {
                 <h2 className='font-semibold font-palanquin text-[1.5rem] text-coral-red'>£{totalPrice}.00</h2>
             </div>
             <Link to="/checkout">
-            <div className="w-full py-6 text-center bg-coral-red pt-6 cursor-pointer">
+            <div onClick={() => {window.scrollTo(0, 0)}} className="w-full py-6 text-center bg-coral-red pt-6 cursor-pointer">
             <p className='font-bold text-[1.4rem] font-palanquin'> CHECKOUT </p>
             </div>
             </Link>
             <div className="flex justify-end pt-4 font-palanquin">
-            <button onClick={() => navigate(-1)} className='bg-slate-200 px-7 py-4 outline-none text-[1.3rem]'> continue shopping </button>
+            <button onClick={contiuneShoping} className='bg-slate-200 px-7 py-4 outline-none text-[1.3rem]'> continue shopping </button>
             </div>
             <TotalCartNumber />
         </section> 
