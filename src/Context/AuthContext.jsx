@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged } from 'firebase/auth'
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, sendPasswordResetEmail } from 'firebase/auth'
 import { auth } from "../firebase-config";
 import db from "../firebase-config";
 
@@ -28,6 +28,16 @@ export const AuthProvider = ({ children }) => {
       // console.error('Error signing up:', error.message);
     }
 }
+const resetPassword = async (email) => {
+    try {
+      await sendPasswordResetEmail(auth, email);
+      // setLoading(false);
+    } catch (error) {
+      // setError(error.message);
+      // setLoading(false);
+      alert(error)
+    }
+  };
 
   useEffect(() => {
   const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -45,7 +55,7 @@ export const AuthProvider = ({ children }) => {
   }
 
   return (
-    <AuthContext.Provider value={{createUser, signIn, user}}>
+    <AuthContext.Provider value={{createUser, signIn, user, resetPassword}}>
       {children}
     </AuthContext.Provider>
   );

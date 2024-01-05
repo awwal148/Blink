@@ -28,6 +28,7 @@ import Account from '../pages/Account';
 import Checkout from '../pages/Checkout';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import DashBoard from '../pages/DashBoard';
+import ResetPassword from './ResetPassword';
 
 const Main = () => {
   return (
@@ -55,6 +56,7 @@ const Main = () => {
         <Route path="/about-us" element={<About />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/account" element={<Account />} />
+        <Route path="/reset" element={<ResetPassword />} />
         <Route path="/checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
         <Route path="/dashboard" element={<ProtectedRoute><DashBoard /></ProtectedRoute>} />
         <Route path="*" element={<Notfound />} />

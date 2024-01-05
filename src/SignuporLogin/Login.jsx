@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuthFilter } from '../Context/AuthContext';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
 function Login() {
   const { signIn } = useAuthFilter();
@@ -22,6 +23,11 @@ function Login() {
 
     }
   };
+
+  const HandleReset = () => {
+    navigate('/reset')
+    window.scrollTo(0,0);
+  }
 
   return (
     <div>
@@ -68,6 +74,7 @@ function Login() {
         <button type="submit" className="bg-coral-red hover:bg-red-500 font-montserrat font-semibold text-white text-[1.5rem] p-2 rounded-md w-full py-5 text-center">
           LOGIN
         </button>
+         <p onClick={HandleReset} className='text-red-500 cursor-pointer'>Forgotten password?</p>
       </form>
     </div>
   );
